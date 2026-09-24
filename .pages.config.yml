@@ -1,0 +1,66 @@
+# Onde as imagens e os PDFs do jornal serão salvos no repositório
+media:
+  input: assets/uploads
+  output: /assets/uploads
+
+content:
+  # 1. GERENCIADOR DE NOTÍCIAS E AVISOS
+  - name: noticias
+    label: Notícias & Avisos
+    type: collection
+    path: _noticias
+    fields:
+      - name: title
+        label: Título da Notícia
+        type: string
+        required: true
+
+      - name: date
+        label: Data de Publicação
+        type: date
+        required: true
+
+      - name: categoria
+        label: Categoria
+        type: string
+        options:
+          - Vida Escolar
+          - Pedagógico
+          - Cooperativa de Pais
+          - Eventos
+
+      - name: image
+        label: Foto de Destaque
+        type: image
+
+      - name: summary
+        label: Resumo Curto (para o cartão na home)
+        type: string
+
+      - name: body
+        label: Texto Completo da Notícia
+        type: rich-text # Editor visual com negrito, itálico, listas, etc.
+
+  # 2. GERENCIADOR DO JORNAL DA ESCOLA
+  - name: jornal
+    label: Edições do Jornal Escolar
+    type: collection
+    path: _jornais
+    fields:
+      - name: edicao
+        label: Número da Edição
+        type: number
+        required: true
+
+      - name: semestre
+        label: Semestre / Ano
+        type: string # Ex: "2026.2"
+
+      - name: destaque
+        label: Matéria de Destaque dos Alunos
+        type: string
+
+      - name: pdf
+        label: Arquivo PDF da Edição
+        type: file # Permite subir o PDF diagramado com arrastar e soltar
+        required: true
