@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escola Coopep | Educação com Afeto, Natureza e Cooperação em Piracicaba</title>
-  
-  <!-- Google Fonts: Fredoka (títulos lúdicos) & Plus Jakarta Sans (leitura limpa) -->
+  <title>Escola Coopep Piracicaba | Educação Infantil e Fundamental em Chácara de 6.000 m²</title>
+  <meta name="description"
+    content="Escola cooperativa em Piracicaba desde 1989. Educação Infantil, Ensino Fundamental e Período Integral com proposta sociointeracionista em uma chácara viva de 6.000 m².">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://escolacoopep.com.br/">
+
+  <!-- Google Fonts: Fredoka e Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Lucide Icons CDN -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
     /* ========================================================
-       SISTEMA DE DESIGN EM CSS PURO - ESCOLA COOPEP
-       Paleta: Azul Coopep (predominante), Laranja, Verde e Branco
+       SISTEMA DE DESIGN EM CSS PURO - IDENTIDADE VISUAL COOPEP
        ======================================================== */
     :root {
-      /* Azul Coopep (Confiança, acolhimento, serenidade) */
+      /* Azul Coopep */
       --cblue-50: #eff6ff;
       --cblue-100: #dbeafe;
       --cblue-200: #bfdbfe;
+      --cblue-300: #93c5fd;
+      --cblue-400: #60a5fa;
       --cblue-500: #3b82f6;
       --cblue-600: #2563eb;
       --cblue-700: #1d4ed8;
@@ -30,27 +38,35 @@
       --cblue-900: #1e3a8a;
       --cblue-950: #172554;
 
-      /* Laranja Coopep (Infância, alegria, energia) */
+      /* Laranja Afetivo */
       --corange-50: #fff7ed;
       --corange-100: #ffedd5;
       --corange-200: #fed7aa;
+      --corange-300: #fdba74;
+      --corange-400: #fb923c;
       --corange-500: #f97316;
       --corange-600: #ea580c;
       --corange-700: #c2410c;
+      --corange-800: #9a3412;
 
-      /* Verde Coopep (6.000m² de chácara, vida, horta) */
+      /* Verde Chácara */
       --cgreen-50: #f0fdf4;
       --cgreen-100: #dcfce7;
       --cgreen-200: #bbf7d0;
+      --cgreen-300: #86efac;
+      --cgreen-400: #4ade80;
       --cgreen-500: #22c55e;
       --cgreen-600: #16a34a;
       --cgreen-700: #15803d;
       --cgreen-800: #166534;
+      --cgreen-950: #052e16;
 
-      /* Tons de Apoio */
+      /* Tons de Apoio Acolhedores */
       --cream-50: #fdfbf7;
       --cream-100: #f8f4ec;
       --cream-200: #eee8dc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
       --slate-500: #64748b;
       --slate-600: #475569;
       --slate-700: #334155;
@@ -62,20 +78,19 @@
       --font-title: 'Fredoka', cursive, sans-serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
 
-      /* Sombras & Arredondamentos Orgânicos */
+      /* Raios e Sombras */
       --radius-sm: 8px;
       --radius-md: 14px;
       --radius-lg: 20px;
       --radius-xl: 28px;
       --radius-full: 9999px;
 
-      --shadow-sm: 0 2px 6px rgba(30, 58, 138, 0.04);
-      --shadow-md: 0 10px 25px -4px rgba(30, 58, 138, 0.08);
-      --shadow-lg: 0 20px 40px -8px rgba(30, 58, 138, 0.12);
-      --shadow-card: 0 12px 30px rgba(37, 99, 235, 0.07);
+      --shadow-sm: 0 2px 8px rgba(30, 58, 138, 0.05);
+      --shadow-md: 0 12px 28px -4px rgba(30, 58, 138, 0.09);
+      --shadow-lg: 0 22px 44px -8px rgba(30, 58, 138, 0.14);
+      --shadow-card: 0 14px 32px rgba(37, 99, 235, 0.08);
     }
 
-    /* Reset Básico */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -91,8 +106,30 @@
       font-family: var(--font-body);
       background-color: var(--cream-50);
       color: var(--slate-800);
-      line-height: 1.6;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--corange-500);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 20px;
+      background: var(--corange-600);
+      color: var(--white);
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      z-index: 999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 12px;
     }
 
     img {
@@ -109,23 +146,16 @@
     button, input, select, textarea {
       font-family: inherit;
       border: none;
-      outline: none;
     }
 
     .container {
       width: 100%;
       max-width: 1220px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 20px;
-      padding-right: 20px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
-    .font-title {
-      font-family: var(--font-title);
-    }
-
-    /* Top Bar Afetiva */
+    /* TOP BAR AFETIVA */
     .top-bar {
       background-color: var(--cblue-900);
       color: var(--white);
@@ -135,6 +165,7 @@
       position: relative;
       z-index: 50;
     }
+
     .top-bar-inner {
       display: flex;
       flex-wrap: wrap;
@@ -142,14 +173,16 @@
       align-items: center;
       gap: 10px;
     }
+
     .top-bar-left, .top-bar-right {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       gap: 14px;
     }
+
     .top-pill {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.14);
       padding: 3px 10px;
       border-radius: var(--radius-full);
       display: inline-flex;
@@ -158,6 +191,7 @@
       color: #fed7aa;
       font-weight: 600;
     }
+
     .top-link {
       display: inline-flex;
       align-items: center;
@@ -165,24 +199,27 @@
       color: #dbeafe;
       transition: color 0.2s;
     }
+
     .top-link:hover {
       color: var(--white);
     }
+
     .top-link.highlight {
       color: #fed7aa;
       font-weight: 700;
     }
 
-    /* Header & Navegação */
+    /* HEADER PRINCIPAL */
     .main-header {
       position: sticky;
       top: 0;
       z-index: 40;
       background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--cblue-100);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     }
+
     .header-inner {
       display: flex;
       align-items: center;
@@ -190,13 +227,13 @@
       height: 84px;
     }
 
-    /* Logo Coopep */
     .brand-logo {
       display: flex;
       align-items: center;
       gap: 12px;
       user-select: none;
     }
+
     .brand-icon {
       position: relative;
       width: 48px;
@@ -210,9 +247,11 @@
       box-shadow: 0 6px 14px rgba(30, 64, 175, 0.25);
       transition: transform 0.25s ease;
     }
+
     .brand-logo:hover .brand-icon {
       transform: scale(1.05) rotate(-2deg);
     }
+
     .brand-dot {
       position: absolute;
       top: -3px;
@@ -223,17 +262,21 @@
       border: 2.5px solid var(--white);
       border-radius: var(--radius-full);
     }
-    .brand-text h1 {
+
+    .brand-title {
       font-family: var(--font-title);
       font-size: 1.45rem;
       font-weight: 700;
       color: var(--cblue-950);
       line-height: 1;
       letter-spacing: -0.02em;
+      display: block;
     }
-    .brand-text h1 span {
+
+    .brand-title span {
       color: var(--corange-600);
     }
+
     .brand-tagline {
       font-size: 0.72rem;
       font-weight: 700;
@@ -243,6 +286,7 @@
       gap: 6px;
       margin-top: 3px;
     }
+
     .green-dot {
       width: 7px;
       height: 7px;
@@ -251,22 +295,30 @@
       display: inline-block;
     }
 
-    /* Nav Links */
+    /* NAVEGAÇÃO DESKTOP & MEGA MENU */
     .desktop-nav {
       display: none;
       align-items: center;
-      gap: 22px;
+      gap: 16px;
     }
+
     .nav-link {
       font-size: 0.88rem;
       font-weight: 700;
       color: var(--slate-700);
       transition: color 0.2s;
+      padding: 6px 2px;
       position: relative;
     }
-    .nav-link:hover {
+
+    .nav-link:hover, .nav-link.active-page {
       color: var(--cblue-700);
     }
+
+    .nav-link-green {
+      color: var(--cgreen-700);
+    }
+
     .nav-pill-link {
       background: var(--corange-50);
       color: var(--corange-700);
@@ -276,21 +328,214 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 700;
       transition: all 0.2s;
     }
+
     .nav-pill-link:hover {
       background: var(--corange-100);
       transform: translateY(-1px);
     }
 
-    /* Botões de Ação do Topo */
+    .nav-family-btn {
+      background: var(--cblue-50);
+      color: var(--cblue-800);
+      border: 1.5px solid var(--cblue-200);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-family-btn:hover {
+      background: var(--cblue-100);
+      border-color: var(--cblue-400);
+    }
+
+    /* MEGA MENU DROPDOWN */
+    .nav-dropdown-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-trigger {
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--slate-700);
+      padding: 10px 4px;
+    }
+
+    .nav-dropdown-trigger:hover,
+    .nav-dropdown-wrapper.open .nav-dropdown-trigger {
+      color: var(--cblue-700);
+    }
+
+    .dropdown-chevron {
+      transition: transform 0.25s ease;
+    }
+
+    .nav-dropdown-wrapper:hover .dropdown-chevron,
+    .nav-dropdown-wrapper.open .dropdown-chevron {
+      transform: rotate(180deg);
+      color: var(--corange-600);
+    }
+
+    .mega-menu-panel {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: -30px;
+      width: 760px;
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      border: 2px solid var(--cblue-100);
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 100;
+    }
+
+    .mega-menu-panel::before {
+      content: "";
+      position: absolute;
+      top: -14px;
+      left: 0;
+      right: 0;
+      height: 14px;
+    }
+
+    .nav-dropdown-wrapper:hover .mega-menu-panel,
+    .nav-dropdown-wrapper.open .mega-menu-panel {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .mega-menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.85fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .mega-menu-col {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mega-col-title {
+      font-family: var(--font-title);
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--slate-500);
+      padding: 0 10px 6px;
+      border-bottom: 1px solid var(--cblue-50);
+      margin-bottom: 4px;
+    }
+
+    .mega-menu-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+    }
+
+    .mega-menu-item:hover {
+      background: var(--cblue-50);
+      transform: translateX(3px);
+    }
+
+    .mega-item-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .mega-menu-item strong {
+      display: block;
+      font-family: var(--font-title);
+      font-size: 0.92rem;
+      color: var(--cblue-950);
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    .mega-menu-item span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--slate-500);
+      line-height: 1.35;
+    }
+
+    .mega-menu-highlight {
+      background: linear-gradient(155deg, var(--cblue-900) 0%, var(--cblue-950) 100%);
+      color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mega-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      color: #fed7aa;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      width: fit-content;
+      margin-bottom: 8px;
+    }
+
+    .mega-menu-highlight h4 {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .mega-menu-highlight p {
+      font-size: 0.78rem;
+      color: var(--cblue-100);
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+
+    /* BOTÕES GERAIS */
     .header-actions {
       display: none;
       align-items: center;
       gap: 12px;
     }
+
     .icon-action-btn {
       width: 44px;
       height: 44px;
@@ -303,35 +548,39 @@
       justify-content: center;
       transition: all 0.2s;
     }
+
     .icon-action-btn:hover {
       background: var(--cgreen-50);
       transform: translateY(-2px);
     }
+
     .btn-primary {
       font-family: var(--font-title);
-      font-size: 0.98rem;
+      font-size: 0.96rem;
       font-weight: 700;
-      padding: 10px 22px;
+      padding: 11px 22px;
       border-radius: var(--radius-lg);
       background: var(--corange-600);
       color: var(--white);
-      box-shadow: 0 8px 18px rgba(234, 88, 12, 0.28);
+      box-shadow: 0 8px 18px rgba(234, 88, 12, 0.25);
       display: inline-flex;
       align-items: center;
       gap: 8px;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .btn-primary:hover {
       background: var(--corange-500);
       transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(234, 88, 12, 0.35);
+      box-shadow: 0 12px 24px rgba(234, 88, 12, 0.34);
     }
+
     .btn-secondary {
       font-family: var(--font-title);
       font-size: 0.95rem;
       font-weight: 700;
-      padding: 10px 20px;
+      padding: 11px 20px;
       border-radius: var(--radius-lg);
       background: var(--white);
       color: var(--cblue-900);
@@ -342,12 +591,18 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
+
     .btn-secondary:hover {
       background: var(--cblue-50);
       border-color: var(--cblue-500);
     }
 
-    /* Menu Hambúrguer Mobile */
+    .btn-lg {
+      padding: 14px 28px;
+      font-size: 1.02rem;
+    }
+
+    /* MENU MOBILE */
     .mobile-menu-toggle {
       width: 44px;
       height: 44px;
@@ -359,6 +614,7 @@
       justify-content: center;
       cursor: pointer;
     }
+
     .mobile-drawer {
       display: none;
       background: var(--white);
@@ -366,16 +622,19 @@
       padding: 20px;
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
     }
+
     .mobile-drawer.open {
       display: block;
     }
+
     .mobile-drawer-links {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin-bottom: 18px;
     }
-    .mobile-drawer-links a {
+
+    .mobile-drawer-links a, .mobile-drawer-links button {
       font-weight: 700;
       padding: 10px 14px;
       border-radius: var(--radius-md);
@@ -383,31 +642,71 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: transparent;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
     }
-    .mobile-drawer-links a:hover {
+
+    .mobile-drawer-links a:hover, .mobile-drawer-links button:hover {
       background: var(--cblue-50);
       color: var(--cblue-800);
     }
 
-    /* HERO SECTION AFETIVA */
+    .mobile-accordion {
+      border: 1.5px solid var(--cblue-100);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--cream-50);
+    }
+
+    .mobile-accordion-trigger {
+      width: 100%;
+      background: var(--white);
+      padding: 12px 14px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--cblue-950);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .mobile-accordion-content {
+      display: none;
+      flex-direction: column;
+      padding: 8px 10px 12px;
+      gap: 4px;
+      border-top: 1px solid var(--cblue-100);
+    }
+
+    .mobile-accordion.open .mobile-accordion-content {
+      display: flex;
+    }
+
+    /* HERO PRINCIPAL */
     .hero-section {
       position: relative;
       overflow: hidden;
-      padding: 60px 0 80px 0;
+      padding: 55px 0 70px 0;
       background-color: var(--cream-50);
       background-image: radial-gradient(var(--cblue-100) 1.5px, transparent 1.5px);
       background-size: 26px 26px;
       border-bottom: 1px solid var(--cblue-100);
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 40px;
       align-items: center;
     }
+
     .hero-content {
       text-align: center;
     }
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -417,28 +716,31 @@
       background: var(--cblue-100);
       border: 1px solid var(--cblue-200);
       color: var(--cblue-900);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 700;
       margin-bottom: 20px;
-      box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
     }
+
     .hero-title {
       font-family: var(--font-title);
-      font-size: 2.3rem;
+      font-size: clamp(2.1rem, 4vw, 3.05rem);
       font-weight: 700;
       color: var(--cblue-950);
-      line-height: 1.18;
+      line-height: 1.16;
       letter-spacing: -0.02em;
       margin-bottom: 18px;
     }
+
     .hero-title .word-orange {
       color: var(--corange-600);
       text-decoration: underline wavy var(--corange-200);
       text-underline-offset: 4px;
     }
+
     .hero-title .word-green {
       color: var(--cgreen-700);
     }
+
     .hero-description {
       font-size: 1.05rem;
       color: var(--slate-600);
@@ -446,6 +748,7 @@
       margin: 0 auto 26px auto;
       line-height: 1.65;
     }
+
     .hero-pills {
       display: flex;
       flex-wrap: wrap;
@@ -453,6 +756,7 @@
       gap: 10px;
       margin-bottom: 30px;
     }
+
     .hero-pill {
       background: var(--white);
       border-radius: var(--radius-full);
@@ -464,9 +768,21 @@
       gap: 6px;
       box-shadow: var(--shadow-sm);
     }
-    .pill-green { border: 1px solid var(--cgreen-200); color: var(--cgreen-800); }
-    .pill-blue { border: 1px solid var(--cblue-200); color: var(--cblue-800); }
-    .pill-orange { border: 1px solid var(--corange-200); color: var(--corange-800); }
+
+    .pill-green {
+      border: 1px solid var(--cgreen-200);
+      color: var(--cgreen-800);
+    }
+
+    .pill-blue {
+      border: 1px solid var(--cblue-200);
+      color: var(--cblue-800);
+    }
+
+    .pill-orange {
+      border: 1px solid var(--corange-200);
+      color: var(--corange-800);
+    }
 
     .hero-buttons {
       display: flex;
@@ -475,6 +791,7 @@
       justify-content: center;
       align-items: center;
     }
+
     .hero-coffee-note {
       font-size: 0.8rem;
       color: var(--slate-500);
@@ -485,12 +802,13 @@
       gap: 6px;
     }
 
-    /* Composição Visual Polaroid */
+    /* POLAROID VISUAL */
     .hero-visual {
       position: relative;
       max-width: 440px;
       margin: 0 auto;
     }
+
     .polaroid-frame {
       background: var(--white);
       padding: 14px 14px 20px 14px;
@@ -500,9 +818,11 @@
       transform: rotate(-2deg);
       transition: transform 0.3s ease;
     }
+
     .polaroid-frame:hover {
       transform: rotate(0deg) scale(1.02);
     }
+
     .polaroid-img-wrapper {
       position: relative;
       height: 310px;
@@ -510,21 +830,24 @@
       overflow: hidden;
       background: var(--cblue-900);
     }
+
     .polaroid-img-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .polaroid-badge-over {
       position: absolute;
       bottom: 12px;
       left: 12px;
       right: 12px;
       color: var(--white);
-      background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent);
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.88), transparent);
       padding: 20px 10px 6px 10px;
       border-radius: var(--radius-md);
     }
+
     .polaroid-tag {
       background: var(--cgreen-600);
       font-size: 0.68rem;
@@ -535,12 +858,14 @@
       display: inline-block;
       margin-bottom: 4px;
     }
+
     .polaroid-badge-over p {
       font-family: var(--font-title);
       font-size: 1.05rem;
       font-weight: 700;
       line-height: 1.2;
     }
+
     .polaroid-caption {
       margin-top: 14px;
       display: flex;
@@ -549,16 +874,17 @@
       padding: 0 6px;
       font-size: 0.8rem;
     }
+
     .polaroid-caption strong {
       font-family: var(--font-title);
       color: var(--cblue-900);
       font-size: 0.95rem;
     }
+
     .polaroid-caption span {
       color: var(--slate-500);
     }
 
-    /* Selos Flutuantes da Imagem */
     .float-sticker {
       position: absolute;
       background: var(--white);
@@ -570,18 +896,21 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
       z-index: 2;
     }
+
     .sticker-horta {
       bottom: -15px;
       left: -15px;
       border: 2px solid var(--cgreen-300);
       transform: rotate(3deg);
     }
+
     .sticker-coop {
       top: -15px;
       right: -15px;
       border: 2px solid var(--corange-300);
       transform: rotate(-3deg);
     }
+
     .sticker-icon {
       width: 38px;
       height: 38px;
@@ -591,8 +920,15 @@
       justify-content: center;
       font-size: 1.2rem;
     }
-    .sticker-horta .sticker-icon { background: var(--cgreen-100); color: var(--cgreen-700); }
-    .sticker-coop .sticker-icon { background: var(--corange-100); color: var(--corange-700); }
+
+    .sticker-horta .sticker-icon {
+      background: var(--cgreen-100);
+    }
+
+    .sticker-coop .sticker-icon {
+      background: var(--corange-100);
+    }
+
     .sticker-text strong {
       display: block;
       font-family: var(--font-title);
@@ -600,9 +936,44 @@
       line-height: 1.1;
       color: var(--slate-900);
     }
+
     .sticker-text span {
       font-size: 0.72rem;
       color: var(--slate-500);
+    }
+
+    /* BARRA DE CONFIANÇA */
+    .trust-metrics-bar {
+      margin-top: 50px;
+      background: var(--white);
+      border: 2px solid var(--cblue-100);
+      border-radius: var(--radius-xl);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .metric-item strong {
+      display: block;
+      font-family: var(--font-title);
+      font-size: 1.45rem;
+      color: var(--cblue-900);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .metric-item span {
+      font-size: 0.8rem;
+      color: var(--slate-600);
+    }
+
+    .metric-divider {
+      display: none;
+      width: 1px;
+      background: var(--cblue-100);
     }
 
     /* SEÇÕES COMUNS */
@@ -610,11 +981,28 @@
       padding: 75px 0;
       border-bottom: 1px solid var(--cblue-100);
     }
+
     .section-header-center {
       text-align: center;
       max-width: 680px;
-      margin: 0 auto 50px auto;
+      margin: 0 auto 48px auto;
     }
+
+    .section-flex-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 32px;
+      gap: 16px;
+    }
+
+    .section-side-note {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+      max-width: 330px;
+    }
+
     .section-badge {
       display: inline-flex;
       align-items: center;
@@ -627,30 +1015,44 @@
       letter-spacing: 0.03em;
       margin-bottom: 12px;
     }
-    .badge-green { background: var(--cgreen-100); color: var(--cgreen-800); }
-    .badge-blue { background: var(--cblue-100); color: var(--cblue-800); }
-    .badge-orange { background: var(--corange-100); color: var(--corange-800); }
+
+    .badge-green {
+      background: var(--cgreen-100);
+      color: var(--cgreen-800);
+    }
+
+    .badge-blue {
+      background: var(--cblue-100);
+      color: var(--cblue-800);
+    }
+
+    .badge-orange {
+      background: var(--corange-100);
+      color: var(--corange-800);
+    }
 
     .section-title {
       font-family: var(--font-title);
-      font-size: 2rem;
+      font-size: clamp(1.75rem, 3vw, 2.15rem);
       font-weight: 700;
       color: var(--cblue-950);
       line-height: 1.22;
       margin-bottom: 14px;
     }
+
     .section-subtitle {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       color: var(--slate-600);
       line-height: 1.6;
     }
 
-    /* Grade da Chácara */
-    .chacara-grid {
+    /* GRIDS */
+    .chacara-grid, .three-col-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 22px;
     }
+
     .chacara-card {
       background: var(--cream-50);
       border-radius: var(--radius-xl);
@@ -661,17 +1063,36 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     .chacara-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-card);
       border-color: var(--cgreen-500);
     }
-    .chacara-card.orange { border-color: var(--corange-100); }
-    .chacara-card.orange:hover { border-color: var(--corange-500); }
-    .chacara-card.blue { border-color: var(--cblue-100); }
-    .chacara-card.blue:hover { border-color: var(--cblue-500); }
-    .chacara-card.yellow { border-color: #fef08a; }
-    .chacara-card.yellow:hover { border-color: #eab308; }
+
+    .chacara-card.orange {
+      border-color: var(--corange-100);
+    }
+
+    .chacara-card.orange:hover {
+      border-color: var(--corange-500);
+    }
+
+    .chacara-card.blue {
+      border-color: var(--cblue-100);
+    }
+
+    .chacara-card.blue:hover {
+      border-color: var(--cblue-500);
+    }
+
+    .chacara-card.yellow {
+      border-color: #fef08a;
+    }
+
+    .chacara-card.yellow:hover {
+      border-color: #eab308;
+    }
 
     .card-icon-box {
       width: 48px;
@@ -683,6 +1104,7 @@
       font-size: 1.5rem;
       margin-bottom: 16px;
     }
+
     .bg-green-box { background: var(--cgreen-100); }
     .bg-orange-box { background: var(--corange-100); }
     .bg-blue-box { background: var(--cblue-100); }
@@ -695,11 +1117,13 @@
       color: var(--cblue-950);
       margin-bottom: 8px;
     }
+
     .chacara-card p {
       font-size: 0.88rem;
       color: var(--slate-600);
       line-height: 1.55;
     }
+
     .card-footer-pill {
       margin-top: 18px;
       padding-top: 12px;
@@ -708,7 +1132,7 @@
       font-weight: 700;
     }
 
-    /* CICLOS EDUCACIONAIS COM ABAS */
+    /* CICLOS EDUCACIONAIS */
     .cycles-tabs-nav {
       display: flex;
       gap: 10px;
@@ -718,9 +1142,11 @@
       border-bottom: 2px solid var(--cblue-100);
       scrollbar-width: none;
     }
+
     .cycles-tabs-nav::-webkit-scrollbar {
       display: none;
     }
+
     .tab-btn {
       font-family: var(--font-title);
       font-size: 0.95rem;
@@ -734,9 +1160,11 @@
       white-space: nowrap;
       transition: all 0.2s;
     }
+
     .tab-btn:hover {
       background: var(--cblue-50);
     }
+
     .tab-btn.active {
       background: var(--cblue-800);
       color: var(--white);
@@ -754,10 +1182,12 @@
       gap: 32px;
       align-items: center;
     }
+
     .cycle-panel.active {
       display: grid;
       grid-template-columns: 1fr;
     }
+
     .cycle-panel-info h3 {
       font-family: var(--font-title);
       font-size: 1.6rem;
@@ -766,18 +1196,21 @@
       line-height: 1.25;
       margin: 10px 0 14px 0;
     }
+
     .cycle-panel-info p {
       font-size: 0.92rem;
       color: var(--slate-600);
       line-height: 1.6;
       margin-bottom: 20px;
     }
+
     .cycle-tags-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 10px;
       margin-bottom: 22px;
     }
+
     .cycle-tag-item {
       background: var(--cream-50);
       border: 1px solid var(--cblue-100);
@@ -790,6 +1223,7 @@
       align-items: center;
       gap: 8px;
     }
+
     .cycle-img-box {
       border-radius: var(--radius-xl);
       overflow: hidden;
@@ -798,28 +1232,31 @@
       height: 280px;
       background: var(--cblue-100);
     }
+
     .cycle-img-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    /* SEÇÃO OPCIONAL: NOTÍCIAS & JORNAL ESCOLAR */
+    /* SEÇÃO COMUNICAÇÃO: NOTÍCIAS & JORNAL */
     #comunicacao-section {
       background: rgba(239, 246, 255, 0.45);
-      border-bottom: 1px solid var(--cblue-100);
     }
+
     .comunicacao-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 30px;
       align-items: start;
     }
+
     .news-module-col {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
+
     .module-header {
       display: flex;
       justify-content: space-between;
@@ -827,6 +1264,7 @@
       padding-bottom: 12px;
       border-bottom: 1.5px solid var(--cblue-200);
     }
+
     .module-header h3 {
       font-family: var(--font-title);
       font-size: 1.25rem;
@@ -835,6 +1273,7 @@
       align-items: center;
       gap: 8px;
     }
+
     .news-card {
       background: var(--white);
       border: 2px solid var(--cblue-100);
@@ -843,11 +1282,13 @@
       transition: all 0.2s ease;
       cursor: pointer;
     }
+
     .news-card:hover {
       border-color: var(--cblue-500);
       box-shadow: var(--shadow-card);
       transform: translateY(-2px);
     }
+
     .news-meta {
       display: flex;
       align-items: center;
@@ -856,11 +1297,13 @@
       color: var(--slate-500);
       margin-bottom: 8px;
     }
+
     .meta-tag {
       font-weight: 800;
       padding: 2px 8px;
       border-radius: var(--radius-full);
     }
+
     .news-card h4 {
       font-family: var(--font-title);
       font-size: 1.05rem;
@@ -869,11 +1312,13 @@
       line-height: 1.3;
       margin-bottom: 6px;
     }
+
     .news-card p {
       font-size: 0.85rem;
       color: var(--slate-600);
       line-height: 1.5;
     }
+
     .news-card-link {
       display: inline-flex;
       align-items: center;
@@ -884,26 +1329,28 @@
       margin-top: 10px;
     }
 
-    /* Coluna do Jornal da Escola */
+    /* JORNAL DA ESCOLA */
     .newspaper-box {
       background: var(--white);
       border: 2px solid var(--corange-200);
       border-radius: var(--radius-xl);
       padding: 24px;
       box-shadow: var(--shadow-card);
-      position: relative;
     }
+
     .newspaper-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 18px;
     }
+
     .newspaper-brand-sub {
       display: flex;
       align-items: center;
       gap: 10px;
     }
+
     .newspaper-icon-box {
       width: 40px;
       height: 40px;
@@ -915,16 +1362,19 @@
       justify-content: center;
       font-size: 1.25rem;
     }
+
     .newspaper-brand-sub h3 {
       font-family: var(--font-title);
       font-size: 1.2rem;
       color: var(--cblue-950);
       line-height: 1;
     }
+
     .newspaper-brand-sub span {
       font-size: 0.72rem;
       color: var(--slate-500);
     }
+
     .newspaper-mock-cover {
       background: var(--cream-100);
       border: 2px dashed var(--corange-300);
@@ -932,12 +1382,14 @@
       padding: 16px;
       margin-bottom: 18px;
     }
+
     .newspaper-paper-sheet {
       background: var(--white);
       border-radius: var(--radius-md);
       padding: 14px;
       border: 1px solid var(--cream-200);
     }
+
     .paper-masthead {
       border-bottom: 1px solid var(--cblue-100);
       padding-bottom: 6px;
@@ -948,6 +1400,7 @@
       font-weight: 700;
       color: var(--slate-500);
     }
+
     .paper-title {
       font-family: var(--font-title);
       font-size: 1.2rem;
@@ -956,12 +1409,14 @@
       line-height: 1.1;
       margin-bottom: 4px;
     }
+
     .paper-motto {
       font-size: 0.75rem;
       font-style: italic;
       color: var(--slate-600);
       margin-bottom: 8px;
     }
+
     .paper-highlight-box {
       background: var(--cgreen-50);
       border: 1px solid var(--cgreen-200);
@@ -971,170 +1426,259 @@
       color: var(--cgreen-950);
     }
 
-    /* WIDGET FLUTUANTE SIMULADOR CMS */
-    .cms-floating-wrapper {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      z-index: 60;
-    }
-    .cms-toggle-trigger {
-      background: var(--cblue-950);
-      color: var(--white);
-      padding: 12px 18px;
-      border-radius: var(--radius-full);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      border: 2.5px solid var(--white);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-    }
-    .cms-toggle-trigger:hover {
-      transform: scale(1.05);
-      background: var(--cblue-800);
-    }
-    .cms-toggle-trigger strong {
-      font-family: var(--font-title);
-      font-size: 0.85rem;
-    }
-    .cms-gear-icon {
-      color: #fde047;
-      transition: transform 0.3s;
-    }
-    .cms-toggle-trigger:hover .cms-gear-icon {
-      transform: rotate(90deg);
-    }
-    .cms-modal-panel {
-      display: none;
-      position: absolute;
-      bottom: 60px;
-      right: 0;
-      width: 320px;
+    /* EQUIPE PEDAGÓGICA PRÉVIA */
+    .team-card {
       background: var(--white);
+      border: 2px solid var(--cblue-100);
       border-radius: var(--radius-xl);
-      border: 2px solid var(--cblue-200);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
-      padding: 20px;
-    }
-    .cms-modal-panel.open {
-      display: block;
-    }
-    .cms-panel-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--slate-100);
-      padding-bottom: 10px;
-      margin-bottom: 12px;
-    }
-    .cms-panel-top h4 {
-      font-family: var(--font-title);
-      font-size: 1rem;
-      color: var(--cblue-950);
-    }
-    .cms-panel-desc {
-      font-size: 0.78rem;
-      color: var(--slate-600);
-      margin-bottom: 14px;
-    }
-    .cms-switch-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--cblue-50);
-      border: 1px solid var(--cblue-100);
-      border-radius: var(--radius-md);
-      padding: 10px 12px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    .cms-switch-item.orange {
-      background: var(--corange-50);
-      border-color: var(--corange-100);
-    }
-    .cms-switch-item strong {
-      display: block;
-      font-size: 0.82rem;
-      color: var(--slate-900);
-    }
-    .cms-switch-item span {
-      font-size: 0.7rem;
-      color: var(--slate-500);
-    }
-    .cms-switch-item input {
-      width: 18px;
-      height: 18px;
-      accent-color: var(--corange-600);
-      cursor: pointer;
-    }
-
-    /* MODAL DO LEITOR DE JORNAL & NOTÍCIAS */
-    .coopep-modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(4px);
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-    }
-    .coopep-modal.active {
-      display: flex;
-    }
-    .modal-paper-container {
-      background: var(--white);
-      width: 100%;
-      max-width: 800px;
-      max-height: 90vh;
-      border-radius: var(--radius-xl);
-      border: 4px solid var(--corange-300);
-      box-shadow: var(--shadow-lg);
+      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 24px;
+      transition: all 0.25s ease;
     }
-    @keyframes modalPop {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+
+    .team-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--cblue-400);
     }
-    .modal-paper-top {
-      background: var(--corange-50);
-      border-bottom: 2px solid var(--corange-200);
-      padding: 14px 20px;
+
+    .team-card.management {
+      border: 2px solid var(--cblue-500);
+      background: linear-gradient(180deg, #ffffff 0%, var(--cblue-50) 100%);
+    }
+
+    .team-card-header {
       display: flex;
+      align-items: flex-start;
       justify-content: space-between;
-      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
     }
-    .modal-paper-top h4 {
+
+    .team-icon-circle {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+
+    .team-role-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      margin-bottom: 6px;
+    }
+
+    .role-blue { background: var(--cblue-100); color: var(--cblue-800); }
+    .role-orange { background: var(--corange-100); color: var(--corange-800); }
+    .role-green { background: var(--cgreen-100); color: var(--cgreen-800); }
+
+    .team-card-name {
+      font-family: var(--font-title);
+      font-size: 1.2rem;
+      color: var(--cblue-950);
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+
+    .team-subrole {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .degree-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      background: var(--corange-100);
+      color: var(--corange-800);
+      margin-bottom: 10px;
+      width: fit-content;
+    }
+
+    .team-credentials-list {
+      list-style: none;
+      margin: 8px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--slate-700);
+      line-height: 1.45;
+    }
+
+    .team-credentials-list li {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .team-credentials-list li::before {
+      content: "•";
+      position: absolute;
+      left: 3px;
+      color: var(--cblue-600);
+      font-weight: 900;
+    }
+
+    .team-preview-cta {
+      background: var(--white);
+      border: 2px dashed var(--cblue-300);
+      border-radius: var(--radius-xl);
+      padding: 30px;
+      text-align: center;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* DOCUMENTOS & TRANSPARÊNCIA */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      margin-bottom: 30px;
+    }
+
+    .doc-card {
+      background: var(--white);
+      border: 2px solid var(--cblue-100);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      transition: all 0.25s ease;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--cblue-400);
+    }
+
+    .doc-card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .doc-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .doc-card-title {
       font-family: var(--font-title);
       font-size: 1.15rem;
       color: var(--cblue-950);
+      margin-bottom: 6px;
+      line-height: 1.3;
     }
-    .modal-body-scroll {
-      flex: 1;
-      overflow-y: auto;
-      padding: 24px;
-      background: var(--cream-50);
+
+    .doc-card-desc {
+      font-size: 0.85rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+      margin-bottom: 16px;
     }
-    .mock-newspaper-page {
-      background: var(--white);
-      padding: 24px;
-      border: 1px solid var(--cream-200);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-    }
-    .modal-footer {
-      background: var(--white);
-      padding: 12px 20px;
-      border-top: 1px solid var(--slate-100);
+
+    .doc-meta-tags {
       display: flex;
-      justify-content: flex-end;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .doc-meta-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      background: var(--cream-100);
+      color: var(--slate-600);
+    }
+
+    .doc-download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px 16px;
+      border-radius: var(--radius-md);
+      background: var(--cblue-800);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .doc-download-btn:hover {
+      background: var(--cblue-900);
+      box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+    }
+
+    .dark-cta-banner {
+      background: linear-gradient(135deg, var(--cblue-900), var(--cblue-950));
+      border-radius: var(--radius-xl);
+      padding: 32px 28px;
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .dark-cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .dark-cta-banner h3 {
+      font-family: var(--font-title);
+      font-size: 1.55rem;
+      margin-bottom: 8px;
+    }
+
+    .dark-cta-banner p {
+      font-size: 0.92rem;
+      color: var(--cblue-100);
+      max-width: 660px;
+      margin: 0 auto 22px;
     }
 
     /* DEPOIMENTOS */
@@ -1143,6 +1687,7 @@
       grid-template-columns: 1fr;
       gap: 20px;
     }
+
     .depoimento-card {
       background: var(--cream-50);
       border: 2px solid var(--cblue-100);
@@ -1153,18 +1698,22 @@
       justify-content: space-between;
       transition: all 0.2s;
     }
+
     .depoimento-card:hover {
       box-shadow: var(--shadow-card);
       border-color: var(--cblue-300);
     }
+
     .depoimento-card.orange { border-color: var(--corange-100); }
     .depoimento-card.green { border-color: var(--cgreen-100); }
+
     .stars-row {
       display: flex;
       gap: 3px;
       color: #f59e0b;
       margin-bottom: 12px;
     }
+
     .depoimento-text {
       font-size: 0.9rem;
       font-style: italic;
@@ -1172,6 +1721,7 @@
       line-height: 1.6;
       margin-bottom: 18px;
     }
+
     .depoimento-author {
       display: flex;
       align-items: center;
@@ -1179,6 +1729,7 @@
       padding-top: 14px;
       border-top: 1px solid rgba(0, 0, 0, 0.06);
     }
+
     .author-avatar {
       width: 44px;
       height: 44px;
@@ -1191,20 +1742,30 @@
       color: var(--cblue-900);
       background: var(--cblue-100);
     }
-    .author-avatar.orange { background: var(--corange-100); color: var(--corange-800); }
-    .author-avatar.green { background: var(--cgreen-100); color: var(--cgreen-800); }
+
+    .author-avatar.orange {
+      background: var(--corange-100);
+      color: var(--corange-800);
+    }
+
+    .author-avatar.green {
+      background: var(--cgreen-100);
+      color: var(--cgreen-800);
+    }
+
     .author-meta strong {
       display: block;
       font-family: var(--font-title);
       font-size: 0.95rem;
       color: var(--cblue-950);
     }
+
     .author-meta span {
       font-size: 0.74rem;
       color: var(--slate-500);
     }
 
-    /* FORMULÁRIO DE VISITA NA CHÁCARA */
+    /* FORMULÁRIO DE VISITA */
     .visita-banner {
       background: var(--cblue-900);
       border-radius: var(--radius-xl);
@@ -1215,6 +1776,7 @@
       display: grid;
       grid-template-columns: 1fr;
     }
+
     .visita-info-side {
       background: var(--cblue-950);
       padding: 36px 30px;
@@ -1223,28 +1785,33 @@
       justify-content: space-between;
       gap: 24px;
     }
+
     .visita-info-side h3 {
       font-family: var(--font-title);
       font-size: 1.85rem;
       line-height: 1.2;
       margin: 10px 0 12px 0;
     }
+
     .visita-info-side p {
       font-size: 0.9rem;
       color: #bfdbfe;
       line-height: 1.6;
     }
+
     .visita-contact-list {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
+
     .visita-contact-item {
       display: flex;
       align-items: flex-start;
       gap: 12px;
       font-size: 0.85rem;
     }
+
     .contact-item-icon {
       width: 36px;
       height: 36px;
@@ -1256,29 +1823,44 @@
       color: var(--cgreen-400);
       flex-shrink: 0;
     }
+
     .contact-item-icon.yellow { color: #fde047; }
     .contact-item-icon.orange { color: #fed7aa; }
+
+    .visita-footer-note {
+      font-size: 0.78rem;
+      color: #93c5fd;
+      border-top: 1px solid var(--cblue-800);
+      padding-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
     .visita-form-side {
       padding: 36px 30px;
       background: var(--cblue-900);
     }
+
     .visita-form-side h4 {
       font-family: var(--font-title);
       font-size: 1.5rem;
       margin-bottom: 6px;
     }
+
     .visita-form-side p.form-subtitle {
       font-size: 0.82rem;
       color: #bfdbfe;
       margin-bottom: 22px;
     }
+
     .form-row {
       display: grid;
       grid-template-columns: 1fr;
       gap: 14px;
       margin-bottom: 14px;
     }
+
     .form-group label {
       display: block;
       font-size: 0.78rem;
@@ -1286,9 +1868,8 @@
       color: #dbeafe;
       margin-bottom: 6px;
     }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
+
+    .form-group input, .form-group select, .form-group textarea {
       width: 100%;
       padding: 12px 16px;
       border-radius: var(--radius-md);
@@ -1297,22 +1878,24 @@
       color: var(--white);
       font-size: 0.88rem;
     }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
       border-color: var(--corange-500);
       background: rgba(15, 23, 42, 0.95);
+      outline: none;
     }
+
     .form-group select option {
       background: var(--cblue-950);
       color: var(--white);
     }
+
     .form-feedback {
       display: none;
-      padding: 12px 16px;
+      padding: 14px 16px;
       border-radius: var(--radius-md);
-      font-size: 0.82rem;
-      font-weight: 700;
+      font-size: 0.84rem;
+      font-weight: 600;
       margin-bottom: 14px;
       background: rgba(34, 197, 94, 0.2);
       border: 1.5px solid var(--cgreen-500);
@@ -1327,6 +1910,7 @@
       border-top: 1px solid var(--cblue-900);
       font-size: 0.85rem;
     }
+
     .footer-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -1334,6 +1918,43 @@
       padding-bottom: 45px;
       border-bottom: 1px solid var(--cblue-900);
     }
+
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .footer-brand-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--cblue-800);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--cgreen-400);
+    }
+
+    .footer-brand-title {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      color: var(--white);
+      display: block;
+    }
+
+    .footer-brand-sub {
+      font-size: 0.72rem;
+      color: var(--cgreen-400);
+    }
+
+    .footer-about-text {
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #94a3b8;
+    }
+
     .footer-col-title {
       font-family: var(--font-title);
       font-size: 0.95rem;
@@ -1342,21 +1963,39 @@
       letter-spacing: 0.05em;
       margin-bottom: 14px;
     }
+
     .footer-links-list {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 9px;
     }
+
     .footer-links-list a:hover {
       color: var(--white);
       text-decoration: underline;
     }
+
+    .footer-links-list button {
+      background: none;
+      color: inherit;
+      cursor: pointer;
+      text-align: left;
+      font-size: inherit;
+      padding: 0;
+    }
+
+    .footer-links-list button:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
     .footer-social-icons {
       display: flex;
       gap: 8px;
       margin-top: 16px;
     }
+
     .footer-icon-btn {
       width: 36px;
       height: 36px;
@@ -1368,9 +2007,11 @@
       justify-content: center;
       transition: background 0.2s;
     }
+
     .footer-icon-btn:hover {
       background: var(--corange-600);
     }
+
     .footer-bottom-bar {
       padding-top: 25px;
       display: flex;
@@ -1382,84 +2023,365 @@
       text-align: center;
     }
 
-    /* ========================================================
-       MEDIA QUERIES RESPONSIVAS (Mobile -> Tablet -> Desktop)
-       ======================================================== */
+    /* BOTÃO FLUTUANTE WHATSAPP */
+    .whatsapp-float-btn {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 56px;
+      height: 56px;
+      background-color: #25d366;
+      color: var(--white);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.38);
+      z-index: 80;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s;
+    }
+
+    .whatsapp-float-btn:hover {
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.52);
+    }
+
+    .whatsapp-tooltip {
+      position: absolute;
+      right: 68px;
+      background: var(--cblue-950);
+      color: var(--white);
+      padding: 6px 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.76rem;
+      font-weight: 700;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(8px);
+      transition: all 0.2s ease;
+    }
+
+    .whatsapp-float-btn:hover .whatsapp-tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* MODAIS */
+    .coopep-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .coopep-modal.active {
+      display: flex;
+    }
+
+    .modal-paper-container {
+      background: var(--white);
+      width: 100%;
+      max-width: 800px;
+      max-height: 90vh;
+      border-radius: var(--radius-xl);
+      border: 4px solid var(--corange-300);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalPop {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-paper-top {
+      background: var(--corange-50);
+      border-bottom: 2px solid var(--corange-200);
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-paper-top h4 {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      color: var(--cblue-950);
+    }
+
+    .modal-body-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      background: var(--cream-50);
+    }
+
+    .mock-newspaper-page {
+      background: var(--white);
+      padding: 24px;
+      border: 1px solid var(--cream-200);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .modal-footer {
+      background: var(--white);
+      padding: 12px 20px;
+      border-top: 1px solid var(--slate-100);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    /* DRAWER LATERAL: ESPAÇO DA FAMÍLIA & COOPERADO */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 90;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .drawer-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .drawer-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 600px;
+      background: var(--white);
+      z-index: 95;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.18);
+    }
+
+    .drawer-overlay.open .drawer-panel {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      background: var(--cblue-950);
+      color: var(--white);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--cblue-800);
+    }
+
+    .drawer-header h3 {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .drawer-close-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .drawer-close-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .drawer-nav-tabs {
+      display: flex;
+      background: var(--cblue-50);
+      border-bottom: 2px solid var(--cblue-100);
+      padding: 6px 16px 0;
+      gap: 6px;
+      overflow-x: auto;
+    }
+
+    .drawer-tab-btn {
+      background: transparent;
+      padding: 10px 14px;
+      font-family: var(--font-title);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--slate-600);
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .drawer-tab-btn.active {
+      background: var(--white);
+      color: var(--cblue-800);
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.04);
+      border: 1.5px solid var(--cblue-100);
+      border-bottom-color: var(--white);
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      background: var(--cream-50);
+    }
+
+    .drawer-pane {
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .drawer-pane.active {
+      display: flex;
+    }
+
+    .drawer-card {
+      background: var(--white);
+      border: 1.5px solid var(--cblue-100);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .drawer-card h4 {
+      font-family: var(--font-title);
+      font-size: 1.05rem;
+      color: var(--cblue-950);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .drawer-card p {
+      font-size: 0.84rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+
+    .drawer-sublist {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .drawer-subitem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--cream-50);
+      border: 1px solid var(--cblue-100);
+      padding: 8px 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+    }
+
+    .drawer-subitem strong {
+      color: var(--slate-800);
+    }
+
+    .drawer-subitem button {
+      background: var(--cblue-100);
+      color: var(--cblue-900);
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: background 0.2s;
+    }
+
+    .drawer-subitem button:hover {
+      background: var(--cblue-200);
+    }
+
+    /* MEDIA QUERIES */
     @media (min-width: 640px) {
-      .hero-title { font-size: 2.8rem; }
       .hero-buttons { flex-direction: row; }
-      .form-row { grid-template-columns: 1fr 1fr; }
-      .chacara-grid { grid-template-columns: repeat(2, 1fr); }
-      .depoimentos-grid { grid-template-columns: repeat(2, 1fr); }
-      .cycle-tags-grid { grid-template-columns: repeat(2, 1fr); }
-      .float-sticker { display: flex; }
-      .footer-bottom-bar {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
+      .form-row, .chacara-grid, .three-col-grid, .depoimentos-grid, .cycle-tags-grid, .doc-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
+      .trust-metrics-bar { grid-template-columns: repeat(2, 1fr); }
+      .float-sticker { display: flex; }
+      .footer-bottom-bar { flex-direction: row; justify-content: space-between; text-align: left; }
     }
 
     @media (min-width: 992px) {
-      .desktop-nav { display: flex; }
-      .header-actions { display: flex; }
+      .desktop-nav, .header-actions { display: flex; }
       .mobile-menu-toggle { display: none; }
-      
-      .hero-grid {
-        grid-template-columns: 1.2fr 0.9fr;
-        gap: 50px;
-      }
-      .hero-content {
+      .hero-grid { grid-template-columns: 1.2fr 0.9fr; gap: 50px; }
+      .hero-content { text-align: left; }
+      .hero-description { margin-left: 0; }
+      .hero-pills, .hero-buttons, .hero-coffee-note { justify-content: flex-start; }
+      .trust-metrics-bar {
+        grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+        align-items: center;
         text-align: left;
       }
-      .hero-pills {
-        justify-content: flex-start;
-      }
-      .hero-buttons {
-        justify-content: flex-start;
-      }
-      .hero-coffee-note {
-        justify-content: flex-start;
-      }
-
+      .metric-divider { display: block; height: 44px; }
       .chacara-grid { grid-template-columns: repeat(4, 1fr); }
-      .depoimentos-grid { grid-template-columns: repeat(3, 1fr); }
-      
-      .cycle-panel.active {
-        grid-template-columns: 1.15fr 0.85fr;
-      }
-      .cycle-img-box {
-        height: 380px;
-      }
-
-      .comunicacao-grid {
-        grid-template-columns: 1.25fr 0.95fr;
-      }
-
-      .visita-banner {
-        grid-template-columns: 0.9fr 1.3fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
-      }
+      .three-col-grid, .depoimentos-grid, .doc-grid { grid-template-columns: repeat(3, 1fr); }
+      .cycle-panel.active { grid-template-columns: 1.15fr 0.85fr; }
+      .cycle-img-box { height: 380px; }
+      .comunicacao-grid { grid-template-columns: 1.25fr 0.95fr; }
+      .visita-banner { grid-template-columns: 0.9fr 1.3fr; }
+      .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; }
     }
   </style>
 </head>
-<body>
 
-  <!-- BARRA DE TOPO AFETIVA -->
-  <aside class="top-bar">
+<body>
+  <!-- Acessibilidade -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ======================================================== -->
+  <!-- 1. BARRA DE TOPO AFETIVA                                 -->
+  <!-- ======================================================== -->
+  <aside class="top-bar" aria-label="Informações rápidas de contato">
     <div class="container top-bar-inner">
       <div class="top-bar-left">
         <span class="top-pill">
           <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
           Portas abertas para novas famílias!
         </span>
-        <span class="top-link">
+        <a href="https://maps.google.com/?q=Av.+Dois+Córregos,+3526+-+Piracicaba" target="_blank"
+          rel="noopener noreferrer" class="top-link">
           <i data-lucide="map-pin" style="width: 14px; height: 14px; color: var(--cgreen-400);"></i>
           Av. Dois Córregos, 3526 - Piracicaba / SP
-        </span>
+        </a>
       </div>
       <div class="top-bar-right">
         <a href="https://wa.me/551934243730" target="_blank" rel="noopener noreferrer" class="top-link">
@@ -1474,18 +2396,20 @@
     </div>
   </aside>
 
-  <!-- HEADER PRINCIPAL -->
+  <!-- ======================================================== -->
+  <!-- 2. HEADER INSTITUCIONAL COM MEGA MENU & AÇÕES            -->
+  <!-- ======================================================== -->
   <header class="main-header">
     <div class="container header-inner">
-      
+
       <!-- Logotipo Coopep -->
-      <a href="#" class="brand-logo" aria-label="Escola Coopep Página Inicial">
+      <a href="index.html" class="brand-logo" aria-label="Escola Coopep - Página Inicial">
         <div class="brand-icon">
           <i data-lucide="trees" style="width: 24px; height: 24px;"></i>
           <span class="brand-dot"></span>
         </div>
         <div class="brand-text">
-          <h1>ESCOLA <span>COOPEP</span></h1>
+          <span class="brand-title">ESCOLA <span>COOPEP</span></span>
           <p class="brand-tagline">
             <span class="green-dot"></span>
             Cooperativa de Pais • Piracicaba
@@ -1495,21 +2419,109 @@
 
       <!-- Menu Desktop -->
       <nav class="desktop-nav" aria-label="Navegação Principal">
-        <a href="#escola" class="nav-link">A Escola</a>
-        <a href="#chacara" class="nav-link" style="color: var(--cgreen-700);">🌿 A Chácara</a>
+
+        <!-- MEGA MENU "A ESCOLA" -->
+        <div class="nav-dropdown-wrapper" id="nav-escola-dropdown">
+          <button type="button" class="nav-link nav-dropdown-trigger" aria-expanded="false"
+            aria-controls="mega-menu-escola">
+            A Escola
+            <i data-lucide="chevron-down" class="dropdown-chevron" style="width: 15px; height: 15px;"></i>
+          </button>
+
+          <!-- Painel Flutuante -->
+          <div class="mega-menu-panel" id="mega-menu-escola" role="region" aria-label="Submenu A Escola">
+            <div class="mega-menu-grid">
+
+              <!-- Coluna 1 -->
+              <div class="mega-menu-col">
+                <span class="mega-col-title">🌱 Identidade & Ensino</span>
+                <a href="#cooperativa" class="mega-menu-item">
+                  <div class="mega-item-icon bg-orange-box">📖</div>
+                  <div>
+                    <strong>Nossa História (Desde 1989)</strong>
+                    <span>Tradição e raízes em Piracicaba</span>
+                  </div>
+                </a>
+                <a href="#ciclos" class="mega-menu-item">
+                  <div class="mega-item-icon bg-blue-box">🧠</div>
+                  <div>
+                    <strong>Proposta Pedagógica</strong>
+                    <span>Sociointeracionismo (Piaget & Vygotsky)</span>
+                  </div>
+                </a>
+                <a href="#chacara" class="mega-menu-item">
+                  <div class="mega-item-icon bg-green-box">🌳</div>
+                  <div>
+                    <strong>A Chácara de 6.000 m²</strong>
+                    <span>Bosque, pomar e horta ao ar livre</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Coluna 2 -->
+              <div class="mega-menu-col">
+                <span class="mega-col-title">🏛️ Estrutura & Pessoas</span>
+                <a href="#equipe" class="mega-menu-item">
+                  <div class="mega-item-icon bg-blue-box">👩‍🏫</div>
+                  <div>
+                    <strong>Equipe Docente & Apoio</strong>
+                    <span>38 profissionais qualificados</span>
+                  </div>
+                </a>
+                <a href="#documentos" class="mega-menu-item">
+                  <div class="mega-item-icon bg-orange-box">📘</div>
+                  <div>
+                    <strong>Projeto Político-Pedagógico</strong>
+                    <span>Diretrizes e avaliação formativa</span>
+                  </div>
+                </a>
+                <button onclick="openFamilyDrawer('materiais')" class="mega-menu-item" style="text-align: left; background: none; border: none; width: 100%; cursor: pointer;">
+                  <div class="mega-item-icon bg-yellow-box">🗓️</div>
+                  <div>
+                    <strong>Regimento, Manuais & Materiais</strong>
+                    <span>Documentos da rotina escolar</span>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Coluna 3: Convite -->
+              <div class="mega-menu-highlight">
+                <div>
+                  <span class="mega-badge">☕ Portas Abertas</span>
+                  <h4>Venha sentir o clima da nossa chácara!</h4>
+                  <p>Agende um café com a coordenação e caminhe pelos nossos 6.000 m² com sua família.</p>
+                </div>
+                <a href="#visita" class="btn-primary"
+                  style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 10px 14px;">
+                  <i data-lucide="calendar-heart" style="width: 15px; height: 15px;"></i>
+                  Agendar Visita Guiada
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <a href="#chacara" class="nav-link nav-link-green">🌿 A Chácara</a>
         <a href="#ciclos" class="nav-link">Infantil & Fundamental</a>
         <a href="#cooperativa" class="nav-link">O Jeito Cooperativo</a>
-        
-        <!-- Link Dinâmico (Mural & Jornal) -->
-        <a href="#comunicacao-section" id="nav-comunicacao-link" class="nav-pill-link">
+        <a href="#documentos" class="nav-link">Documentos & PPP</a>
+
+        <a href="#comunicacao-section" class="nav-pill-link">
           <i data-lucide="newspaper" style="width: 16px; height: 16px;"></i>
           Jornal & Notícias
         </a>
+
+        <button onclick="openFamilyDrawer('materiais')" class="nav-family-btn" title="Lista de Materiais, Uniforme e Manual">
+          <i data-lucide="book-open" style="width: 15px; height: 15px; color: var(--cblue-700);"></i>
+          Área da Família
+        </button>
       </nav>
 
-      <!-- Botões de Ação -->
+      <!-- Botões de Ação Desktop -->
       <div class="header-actions">
-        <a href="https://wa.me/551934243730" target="_blank" class="icon-action-btn" title="Conversar no WhatsApp">
+        <a href="https://wa.me/551934243730" target="_blank" rel="noopener noreferrer" class="icon-action-btn"
+          title="Conversar no WhatsApp" aria-label="Conversar no WhatsApp">
           <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i>
         </a>
         <a href="#visita" class="btn-primary">
@@ -1519,7 +2531,8 @@
       </div>
 
       <!-- Botão Hambúrguer Mobile -->
-      <button class="mobile-menu-toggle" id="mobile-toggle-btn" aria-label="Abrir menu de navegação">
+      <button class="mobile-menu-toggle" id="mobile-toggle-btn" aria-label="Abrir menu de navegação"
+        aria-expanded="false" aria-controls="mobile-drawer">
         <i data-lucide="menu" id="menu-icon-bars" style="width: 24px; height: 24px;"></i>
         <i data-lucide="x" id="menu-icon-close" style="width: 24px; height: 24px; display: none;"></i>
       </button>
@@ -1529,97 +2542,57 @@
     <!-- Gaveta Mobile -->
     <div class="mobile-drawer" id="mobile-drawer">
       <div class="mobile-drawer-links">
-        <a href="#escola" class="mobile-link">A Escola e Valores</a>
+        <button onclick="openFamilyDrawer('materiais'); toggleMobileMenu(true);" style="background: var(--corange-50); color: var(--corange-800); border: 1px solid var(--corange-200); font-weight: 800;">
+          <span>🎒 Área da Família (Materiais, Uniforme, Manual)</span>
+          <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+        </button>
+
         <a href="#chacara" class="mobile-link" style="color: var(--cgreen-700);">A Chácara (6.000 m²) 🌳</a>
         <a href="#ciclos" class="mobile-link">Infantil, Fundamental & Integral</a>
         <a href="#cooperativa" class="mobile-link">A Cooperativa de Famílias</a>
-        <a href="#comunicacao-section" id="mobile-comunicacao-link" class="mobile-link" style="background: var(--corange-50); color: var(--corange-700);">
+        <a href="#equipe" class="mobile-link">Equipe & Educadores</a>
+        <a href="#documentos" class="mobile-link">Documentos & PPP</a>
+        <a href="#comunicacao-section" class="mobile-link" style="background: var(--corange-50); color: var(--corange-700);">
           <span>📰 Jornal & Notícias</span>
-          <span style="font-size: 0.65rem; background: var(--corange-200); padding: 2px 6px; border-radius: 9999px;">Ativo</span>
         </a>
       </div>
-      <a href="#visita" class="btn-primary mobile-link" style="display: flex; justify-content: center; width: 100%; margin-bottom: 10px;">
+      <a href="#visita" class="btn-primary mobile-link"
+        style="display: flex; justify-content: center; width: 100%; margin-bottom: 10px;" onclick="toggleMobileMenu(true)">
         Agendar Visita com a Família
       </a>
-      <a href="https://wa.me/551934243730" target="_blank" class="btn-secondary" style="display: flex; justify-content: center; width: 100%;">
+      <a href="https://wa.me/551934243730" target="_blank" rel="noopener noreferrer" class="btn-secondary"
+        style="display: flex; justify-content: center; width: 100%;">
         <i data-lucide="message-circle" style="width: 16px; height: 16px; color: var(--cgreen-600);"></i>
         WhatsApp Secretaria
       </a>
     </div>
   </header>
 
-  <!-- WIDGET FLUTUANTE SIMULADOR CMS -->
-  <aside class="cms-floating-wrapper">
-    <div style="position: relative;">
-      <button class="cms-toggle-trigger" id="cms-toggle-trigger" title="Simular Ativação/Desativação de Módulos">
-        <i data-lucide="settings" class="cms-gear-icon" style="width: 18px; height: 18px;"></i>
-        <strong>Simular CMS</strong>
-      </button>
+  <main id="conteudo-principal">
 
-      <!-- Gaveta de Controle -->
-      <div class="cms-modal-panel" id="cms-modal-panel">
-        <div class="cms-panel-top">
-          <h4>Módulos Opcionais</h4>
-          <button id="cms-close-btn" style="background: none; cursor: pointer; color: var(--slate-500);">
-            <i data-lucide="x" style="width: 18px; height: 18px;"></i>
-          </button>
-        </div>
-        <p class="cms-panel-desc">
-          Ligue ou desligue o Jornal e as Notícias para conferir como a página se reorganiza de forma limpa, sem espaços vazios.
-        </p>
-
-        <!-- Toggle Notícias -->
-        <label class="cms-switch-item">
-          <div>
-            <strong>Mural de Notícias</strong>
-            <span>Avisos e comunicados da escola</span>
-          </div>
-          <input type="checkbox" id="toggle-news-check" checked>
-        </label>
-
-        <!-- Toggle Jornal da Escola -->
-        <label class="cms-switch-item orange">
-          <div>
-            <strong>Jornal da Escola</strong>
-            <span>"Vozes da Chácara" (Leitor digital)</span>
-          </div>
-          <input type="checkbox" id="toggle-paper-check" checked>
-        </label>
-
-        <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--slate-100); font-size: 0.75rem; display: flex; justify-content: space-between; align-items: center;">
-          <span style="color: var(--slate-500);">Visualização Atual:</span>
-          <span id="cms-status-badge" style="font-weight: 700; color: var(--cgreen-700); background: var(--cgreen-100); padding: 2px 8px; border-radius: var(--radius-full);">
-            Completo
-          </span>
-        </div>
-      </div>
-    </div>
-  </aside>
-
-  <main>
-    <!-- HERO SECTION AFETIVA -->
+    <!-- ======================================================== -->
+    <!-- 3. HERO FOCADO NO PÚBLICO EXTERNO                        -->
+    <!-- ======================================================== -->
     <section class="hero-section" id="escola">
       <div class="container hero-grid">
-        
-        <!-- Conteúdo Principal -->
+
         <div class="hero-content">
           <div class="hero-badge">
-            <span style="font-size: 1rem;">🌱</span>
+            <span aria-hidden="true">🌱</span>
             Educação com respeito à infância • Piracicaba desde 1989
           </div>
 
-          <h2 class="hero-title">
-            Uma escola feita de <span class="word-orange">afeto</span>, 
+          <h1 class="hero-title">
+            Uma escola feita de <span class="word-orange">afeto</span>,
             natureza viva e <span class="word-green">cooperação humana.</span>
-          </h2>
+          </h1>
 
           <p class="hero-description">
-            Aqui seu filho não é apenas um número de matrícula. Em uma acolhedora 
-            <strong style="color: var(--slate-900);">chácara de 6.000 m²</strong>, criamos um espaço seguro onde as crianças 
-            sobem em árvores, investigam a terra, desenvolvem pensamento crítico e crescem felizes e seguras de si.
+            Aqui seu filho não é apenas um número de matrícula. Em uma acolhedora
+            <strong style="color: var(--slate-900);">chácara de 6.000 m²</strong>, criamos um espaço seguro onde as
+            crianças sobem em árvores, investigam a terra, desenvolvem pensamento crítico e crescem felizes e seguras de si.
           </p>
 
-          <!-- Badges de Destaque -->
           <div class="hero-pills">
             <span class="hero-pill pill-green">
               <i data-lucide="trees" style="width: 14px; height: 14px;"></i>
@@ -1635,13 +2608,12 @@
             </span>
           </div>
 
-          <!-- Botões de Chamada -->
           <div class="hero-buttons">
-            <a href="#visita" class="btn-primary" style="padding: 14px 28px; font-size: 1.05rem;">
+            <a href="#visita" class="btn-primary btn-lg">
               <i data-lucide="compass" style="width: 18px; height: 18px;"></i>
               Conhecer a Escola com a Família
             </a>
-            <a href="https://wa.me/551934243730" target="_blank" class="btn-secondary" style="padding: 14px 24px;">
+            <a href="https://wa.me/551934243730" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-lg">
               <i data-lucide="message-circle" style="width: 18px; height: 18px; color: var(--cgreen-600);"></i>
               Conversar pelo WhatsApp
             </a>
@@ -1653,15 +2625,14 @@
           </div>
         </div>
 
-        <!-- Polaroid Visual com Imagem e Selos -->
+        <!-- Polaroid Visual -->
         <div class="hero-visual">
           <div class="polaroid-frame">
             <div class="polaroid-img-wrapper">
-              <img 
-                src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80" 
-                alt="Crianças aprendendo e brincando ao ar livre na Escola Coopep" 
-                onerror="this.src='https://placehold.co/800x600/2563eb/ffffff?text=Infância+Livre+na+Coopep'"
-              >
+              <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80"
+                alt="Crianças aprendendo e brincando ao ar livre na chácara da Escola Coopep em Piracicaba" width="440"
+                height="320" fetchpriority="high"
+                onerror="this.src='https://placehold.co/800x600/2563eb/ffffff?text=Infância+Livre+na+Coopep'">
               <div class="polaroid-badge-over">
                 <span class="polaroid-tag">Pátio Aberto da Chácara</span>
                 <p>Aprender sentindo a terra, o vento e a alegria da convivência</p>
@@ -1669,13 +2640,12 @@
             </div>
             <div class="polaroid-caption">
               <strong>#InfânciaVivaNaCoopep</strong>
-              <span>Turma dos Quatis e Canários</span>
+              <span>Educação Infantil & Fundamental</span>
             </div>
           </div>
 
-          <!-- Selos Flutuantes -->
           <div class="float-sticker sticker-horta">
-            <div class="sticker-icon">🥕</div>
+            <div class="sticker-icon" aria-hidden="true">🥕</div>
             <div class="sticker-text">
               <strong>Horta Pedagógica</strong>
               <span>Plantio e colheita diária</span>
@@ -1683,7 +2653,7 @@
           </div>
 
           <div class="float-sticker sticker-coop">
-            <div class="sticker-icon">🤝</div>
+            <div class="sticker-icon" aria-hidden="true">🤝</div>
             <div class="sticker-text">
               <strong>Sem Fins Lucrativos</strong>
               <span>100% reinvestido nas crianças</span>
@@ -1692,77 +2662,104 @@
         </div>
 
       </div>
+
+      <!-- Barra de Indicadores de Confiança -->
+      <div class="container">
+        <div class="trust-metrics-bar">
+          <div class="metric-item">
+            <strong>+35 Anos</strong>
+            <span>De história e tradição em Piracicaba (desde 1989)</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <strong>6.000 m²</strong>
+            <span>De chácara arborizada, pomar, horta e quadras</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <strong>100% Reinvestido</strong>
+            <span>Cooperativa de pais sem fins lucrativos</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <strong>38 Educadores</strong>
+            <span>Equipe com mestres, doutores e especialistas</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- SEÇÃO: NOSSO CANTINHO NO MUNDO -->
+    <!-- ======================================================== -->
+    <!-- 4. SEÇÃO CHÁCARA DE 6.000 M²                             -->
+    <!-- ======================================================== -->
     <section class="section-spacing" id="chacara" style="background: var(--white);">
       <div class="container">
-        
+
         <div class="section-header-center">
           <span class="section-badge badge-green">
-            <span>🌿</span> Nosso Espaço em Piracicaba
+            <span aria-hidden="true">🌿</span> Nosso Espaço em Piracicaba
           </span>
           <h2 class="section-title">
             6.000 m² de chácara onde a infância pode ser, de verdade, infância
           </h2>
           <p class="section-subtitle">
-            Em vez de corredores fechados e grades cinzentas, oferecemos árvores frondosas para subir, 
-            terra vermelha para brincar, horta cuidada pelas crianças, pomar, ateliês e muito espaço para correr.
+            Em vez de corredores fechados e grades cinzentas, oferecemos árvores frondosas para subir,
+            terra vermelha para brincar, horta cuidada pelas crianças, pomar e muito espaço para correr.
           </p>
         </div>
 
         <div class="chacara-grid">
-          
-          <!-- Card 1 -->
-          <div class="chacara-card">
+          <article class="chacara-card">
             <div>
-              <div class="card-icon-box bg-green-box">🌳</div>
-              <h3>Árvores & Pomar</h3>
-              <p>Mangueiras, amoreiras e árvores nativas onde as crianças sobem com supervisão atenta, colhem frutas do pé e observam pássaros.</p>
+              <div class="card-icon-box bg-green-box" aria-hidden="true">🌳</div>
+              <h3>Bosque & Pomar</h3>
+              <p>Mangueiras, amoreiras e árvores nativas onde as crianças sobem com supervisão atenta, colhem frutas do
+                pé e observam pássaros.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--cgreen-800);">Contato sensorial diário</div>
-          </div>
+          </article>
 
-          <!-- Card 2 -->
-          <div class="chacara-card orange">
+          <article class="chacara-card orange">
             <div>
-              <div class="card-icon-box bg-orange-box">🌱</div>
+              <div class="card-icon-box bg-orange-box" aria-hidden="true">🌱</div>
               <h3>Horta & Compostagem</h3>
-              <p>Mãos na terra para plantar cenouras e temperos. O ciclo da matéria orgânica compreendido na prática viva das aulas de ciências.</p>
+              <p>Mãos na terra para plantar cenouras e temperos. O ciclo da matéria orgânica compreendido na prática
+                viva das aulas de ciências.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--corange-800);">Sustentabilidade prática</div>
-          </div>
+          </article>
 
-          <!-- Card 3 -->
-          <div class="chacara-card blue">
+          <article class="chacara-card blue">
             <div>
-              <div class="card-icon-box bg-blue-box">⚽</div>
+              <div class="card-icon-box bg-blue-box" aria-hidden="true">⚽</div>
               <h3>Pátio de Areia & Campo</h3>
-              <p>Espaço para brincadeiras de movimento livre, esportes coletivos e desenvolvimento psicomotor sadio sem pressão por desempenho precoce.</p>
+              <p>Espaço para brincadeiras de movimento livre, esportes coletivos e desenvolvimento psicomotor sadio sem
+                pressão por desempenho precoce.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--cblue-800);">Corpo ativo e integrado</div>
-          </div>
+          </article>
 
-          <!-- Card 4 -->
-          <div class="chacara-card yellow">
+          <article class="chacara-card yellow">
             <div>
-              <div class="card-icon-box bg-yellow-box">🎨</div>
-              <h3>Ateliê & Biblioteca</h3>
-              <p>Salas arejadas e ateliês com tintas naturais, cantos de leitura acolhedores com almofadas e acervo literário rico em ilustrações.</p>
+              <div class="card-icon-box bg-yellow-box" aria-hidden="true">📚</div>
+              <h3>Biblioteca & Leitura</h3>
+              <p>Salas arejadas, cantos de leitura acolhedores com almofadas e acervo literário rico em ilustrações e
+                clássicos infantis.</p>
             </div>
             <div class="card-footer-pill" style="color: #854d0e;">Imaginação e sensibilidade</div>
-          </div>
-
+          </article>
         </div>
 
       </div>
     </section>
 
-    <!-- SEÇÃO: CICLOS EDUCACIONAIS -->
+    <!-- ======================================================== -->
+    <!-- 5. SEÇÃO CICLOS EDUCACIONAIS COM ABAS                    -->
+    <!-- ======================================================== -->
     <section class="section-spacing" id="ciclos">
       <div class="container">
-        
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; gap: 16px;">
+
+        <div class="section-flex-header">
           <div>
             <span class="section-badge badge-blue">
               <i data-lucide="heart" style="width: 14px; height: 14px; color: var(--corange-500);"></i>
@@ -1770,171 +2767,157 @@
             </span>
             <h2 class="section-title" style="margin-bottom: 0;">Os Ciclos que Abraçamos com Todo Amor</h2>
           </div>
-          <p style="font-size: 0.9rem; color: var(--slate-600); max-width: 320px;">
+          <p class="section-side-note">
             Da curiosidade pura dos 2 aninhos até a autonomia segura no 9º ano do Ensino Fundamental.
           </p>
         </div>
 
-        <!-- Abas Navegáveis -->
-        <div class="cycles-tabs-nav">
-          <button class="tab-btn active" data-tab="tab-infantil">🐣 Educação Infantil (2 a 5 anos)</button>
-          <button class="tab-btn" data-tab="tab-fundamental">📚 Ensino Fundamental (1º ao 9º ano)</button>
-          <button class="tab-btn" data-tab="tab-integral">☀️ Período Integral & Oficinas</button>
+        <div class="cycles-tabs-nav" role="tablist" aria-label="Ciclos de Ensino">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="tab-infantil">🐣 Educação Infantil (2 a 5 anos)</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-fundamental">📚 Ensino Fundamental (1º ao 9º ano)</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-integral">☀️ Período Integral Sem Estresse</button>
         </div>
 
         <!-- Painel Infantil -->
-        <div class="cycle-panel active" id="tab-infantil">
+        <div class="cycle-panel active" id="tab-infantil" role="tabpanel">
           <div class="cycle-panel-info">
             <span class="section-badge badge-orange">🐥 Primeiras Grandes Descobertas</span>
             <h3>Brincar livre, afeto na acolhida e os primeiros laços sociais</h3>
             <p>
-              Na Educação Infantil da Coopep, respeitamos o tempo da infância. Sem excesso de telas ou cobrança mecânica de apostilas. 
+              Na Educação Infantil da Coopep, respeitamos o tempo da infância. Sem excesso de telas ou cobrança mecânica.
               Aqui as crianças descobrem o mundo brincando com água, folhas, sementes e rodas de história, aprendendo a conviver com empatia e carinho.
             </p>
-
             <div class="cycle-tags-grid">
               <div class="cycle-tag-item"><span>🌿</span> Contato diário com a terra e horta</div>
               <div class="cycle-tag-item"><span>🍎</span> Lanche saudável com partilha</div>
-              <div class="cycle-tag-item"><span>🎨</span> Ateliês com argila e tintas naturais</div>
-              <div class="cycle-tag-item"><span>🤗</span> Adaptação suave e próxima às famílias</div>
+              <div class="cycle-tag-item"><span>🎨</span> Artes com argila e tintas naturais</div>
+              <div class="cycle-tag-item"><span>🤗</span> Máximo de 16 crianças por turma</div>
             </div>
-
-            <a href="#visita" class="btn-primary" style="font-size: 0.9rem;">
-              Conhecer a sala da Educação Infantil
+            <a href="#visita" class="btn-primary">
+              Conhecer a Educação Infantil
               <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
             </a>
           </div>
-
           <div class="cycle-img-box">
-            <img 
-              src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80" 
-              alt="Educação infantil na Escola Coopep"
-              onerror="this.src='https://placehold.co/700x500/2563eb/ffffff?text=Educação+Infantil+Coopep'"
-            >
+            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80"
+              alt="Crianças brincando na Educação Infantil da Escola Coopep" width="520" height="380" loading="lazy"
+              onerror="this.src='https://placehold.co/700x500/2563eb/ffffff?text=Educação+Infantil+Coopep'">
           </div>
         </div>
 
         <!-- Painel Fundamental -->
-        <div class="cycle-panel" id="tab-fundamental">
+        <div class="cycle-panel" id="tab-fundamental" role="tabpanel">
           <div class="cycle-panel-info">
             <span class="section-badge badge-blue">📖 1º ao 9º ano</span>
             <h3>Pesquisa que faz sentido, diálogo aberto e senso crítico</h3>
             <p>
-              No Ensino Fundamental, o sociointeracionismo ganha vigor. Os conteúdos da BNCC são explorados através de projetos reais, 
-              debates, investigações de campo na chácara e no laboratório. Incentivamos a leitura com prazer e a formação de cidadãos conscientes.
+              No Ensino Fundamental, o sociointeracionismo ganha vigor. Os conteúdos curriculares são explorados através de projetos reais,
+              debates, investigações na chácara e livros didáticos renomados (Moderna Buriti e Araribá Plus).
             </p>
-
             <div class="cycle-tags-grid">
-              <div class="cycle-tag-item"><span>🔬</span> Ciências práticas na chácara e laboratório</div>
+              <div class="cycle-tag-item"><span>🔬</span> Ciências práticas na chácara</div>
               <div class="cycle-tag-item"><span>✍️</span> Redação autoral e jornalzinho escolar</div>
-              <div class="cycle-tag-item"><span>🤝</span> Rodas de conversa e assembleias de classe</div>
+              <div class="cycle-tag-item"><span>🤝</span> Filosofia e assembleias de classe</div>
               <div class="cycle-tag-item"><span>💡</span> Turmas com limite reduzido de alunos</div>
             </div>
-
-            <a href="#visita" class="btn-primary" style="font-size: 0.9rem; background: var(--cblue-800);">
+            <a href="#visita" class="btn-primary" style="background: var(--cblue-800);">
               Conversar sobre o Ensino Fundamental
               <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
             </a>
           </div>
-
           <div class="cycle-img-box">
-            <img 
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" 
-              alt="Ensino fundamental na Escola Coopep"
-              onerror="this.src='https://placehold.co/700x500/2563eb/ffffff?text=Ensino+Fundamental+Coopep'"
-            >
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+              alt="Estudantes no Ensino Fundamental da Escola Coopep" width="520" height="380" loading="lazy"
+              onerror="this.src='https://placehold.co/700x500/2563eb/ffffff?text=Ensino+Fundamental+Coopep'">
           </div>
         </div>
 
         <!-- Painel Integral -->
-        <div class="cycle-panel" id="tab-integral">
+        <div class="cycle-panel" id="tab-integral" role="tabpanel">
           <div class="cycle-panel-info">
             <span class="section-badge badge-green">☀️ Turno Estendido Sem Estresse</span>
-            <h3>Um segundo lar com afeto, apoio pedagógico e brincadeiras</h3>
+            <h3>Um segundo lar com afeto, apoio pedagógico e oficinas</h3>
             <p>
-              Para as famílias que precisam de período integral, planejamos uma extensão equilibrada com almoço balanceado, momento de descanso, 
-              apoio nas lições de casa, oficinas de música, teatro, culinária infantil e muito ar livre.
+              Para as famílias que precisam de período integral, planejamos uma extensão equilibrada com almoço balanceado,
+              apoio nas lições de casa, oficinas de música, teatro, culinária infantil e muito tempo livre no bosque.
             </p>
-
             <div class="cycle-tags-grid">
-              <div class="cycle-tag-item"><span>🍲</span> Cardápio nutritivo e acompanhado</div>
-              <div class="cycle-tag-item"><span>📚</span> Orientação diária para deveres de casa</div>
-              <div class="cycle-tag-item"><span>🎭</span> Oficinas expressivas de arte e teatro</div>
+              <div class="cycle-tag-item"><span>🍲</span> Cardápio caseiro e acompanhado</div>
+              <div class="cycle-tag-item"><span>📚</span> Orientação diária para tarefas escolares</div>
+              <div class="cycle-tag-item"><span>🎭</span> Oficinas expressivas de arte e corpo</div>
               <div class="cycle-tag-item"><span>🌳</span> Tempo livre para correr no gramado</div>
             </div>
-
-            <a href="#visita" class="btn-primary" style="font-size: 0.9rem; background: var(--cgreen-700);">
+            <a href="#visita" class="btn-primary" style="background: var(--cgreen-700);">
               Consultar vagas do Período Integral
               <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
             </a>
           </div>
-
           <div class="cycle-img-box">
-            <img 
-              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" 
-              alt="Período integral na Escola Coopep"
-              onerror="this.src='https://placehold.co/700x500/2563eb/ffffff?text=Período+Integral+Coopep'"
-            >
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80"
+              alt="Oficinas do Período Integral na Escola Coopep" width="520" height="380" loading="lazy"
+              onerror="this.src='https://placehold.co/700x500/2563eb/ffffff?text=Período+Integral+Coopep'">
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SEÇÃO: O JEITO COOPEP DE SER ESCOLA -->
+    <!-- ======================================================== -->
+    <!-- 6. SEÇÃO MODELO COOPERATIVO / SOMOSCOOP                  -->
+    <!-- ======================================================== -->
     <section class="section-spacing" id="cooperativa" style="background: var(--white);">
       <div class="container">
-        
+
         <div class="section-header-center">
           <span class="section-badge badge-orange">
-            <span>🤝</span> Sem Fins Lucrativos
+            <span aria-hidden="true">🤝</span> Sem Fins Lucrativos
           </span>
           <h2 class="section-title">Por que uma escola gerida por pais faz toda a diferença?</h2>
           <p class="section-subtitle">
-            Aqui não existe um proprietário ou rede com acionistas. A Coopep é uma cooperativa fundada por famílias piracicabanas, 
+            Aqui não existe um proprietário ou grupo empresarial visando lucro. A Coopep é uma cooperativa fundada por famílias piracicabanas,
             onde toda a receita é reinvestida no conforto dos nossos filhos e na valorização dos educadores.
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-          
-          <div class="chacara-card blue" style="background: var(--cream-50);">
+        <div class="three-col-grid">
+          <article class="chacara-card blue" style="background: var(--cream-50);">
             <div>
               <div class="card-icon-box bg-blue-box" style="font-size: 1.6rem;">❤️</div>
               <h3>100% Reinvestido</h3>
-              <p>Cada mensalidade é direcionada para melhorias nos espaços da chácara, novos livros, merenda saudável e cursos de aperfeiçoamento para nossos professores.</p>
+              <p>Cada mensalidade é direcionada para melhorias nos espaços da chácara, novos livros, alimentação de qualidade e formação contínua para nossos professores.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--cblue-800);">Transparência total e conselho fiscal</div>
-          </div>
+          </article>
 
-          <div class="chacara-card orange" style="background: var(--cream-50);">
+          <article class="chacara-card orange" style="background: var(--cream-50);">
             <div>
               <div class="card-icon-box bg-orange-box" style="font-size: 1.6rem;">👨‍👩‍👧‍👦</div>
               <h3>Famílias Presentes</h3>
-              <p>Os pais têm voz ativa nas assembleias, participam de comissões de melhorias e celebram juntos nas festas comunitárias tradicionais da nossa escola.</p>
+              <p>Os pais têm voz ativa nas assembleias, participam de comissões de melhorias e celebram juntos nas festas comunitárias tradicionais da escola.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--corange-800);">Comunidade que educa unida</div>
-          </div>
+          </article>
 
-          <div class="chacara-card" style="background: var(--cream-50);">
+          <article class="chacara-card" style="background: var(--cream-50);">
             <div>
               <div class="card-icon-box bg-green-box" style="font-size: 1.6rem;">🌱</div>
               <h3>Turminhas Reduzidas</h3>
               <p>Salas com número controlado de estudantes para que o educador conheça a fundo o ritmo, as afinidades e as necessidades individuais de cada criança.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--cgreen-800);">Atenção individualizada de verdade</div>
-          </div>
-
+          </article>
         </div>
 
       </div>
     </section>
 
-    <!-- SEÇÃO OPCIONAL: NOTÍCIAS & JORNAL ESCOLAR -->
+    <!-- ======================================================== -->
+    <!-- 7. SEÇÃO COMUNICAÇÃO: NOTÍCIAS & JORNAL ESCOLAR          -->
+    <!-- ======================================================== -->
     <section class="section-spacing" id="comunicacao-section">
       <div class="container">
-        
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 35px; gap: 16px;">
+
+        <div class="section-flex-header">
           <div>
             <span class="section-badge badge-orange">
               <i data-lucide="newspaper" style="width: 14px; height: 14px;"></i>
@@ -1942,14 +2925,14 @@
             </span>
             <h2 class="section-title" style="margin-bottom: 0;">Acontece na Coopep & A Voz dos Nossos Alunos</h2>
           </div>
-          <p style="font-size: 0.9rem; color: var(--slate-600); max-width: 320px;">
+          <p class="section-side-note">
             Acompanhe nossos comunicados e leia o jornalzinho feito com a escrita e a arte dos estudantes.
           </p>
         </div>
 
         <div class="comunicacao-grid" id="comunicacao-grid">
-          
-          <!-- SUBMÓDULO: NOTÍCIAS & AVISOS -->
+
+          <!-- COLUNA 1: NOTÍCIAS & AVISOS -->
           <div class="news-module-col" id="submodule-noticias">
             <div class="module-header">
               <h3>
@@ -1959,12 +2942,12 @@
               <span style="font-size: 0.75rem; color: var(--slate-500); font-weight: 700;">Atualizado recentemente</span>
             </div>
 
-            <!-- Notícia 1 -->
-            <article class="news-card" onclick="openNewsModal('Festa da Primavera na Chácara: Música, Ciranda e Piquenique', 'Convidamos todas as famílias para celebrar a estação das flores debaixo de nossas mangueiras! Teremos apresentações musicais dos alunos, oficinas de barro e partilha comunitária de lanches saudáveis.')">
+            <article class="news-card" tabindex="0" role="button"
+              onclick="openNewsModal('Festa da Primavera na Chácara: Música, Ciranda e Piquenique', 'Convidamos todas as famílias para celebrar a estação das flores debaixo de nossas mangueiras! Teremos apresentações musicais dos alunos, oficinas de barro e partilha comunitária de lanches saudáveis no sábado.')">
               <div class="news-meta">
                 <span class="meta-tag" style="background: var(--cgreen-100); color: var(--cgreen-800);">Vida Escolar</span>
                 <span>•</span>
-                <span>24 de Setembro, 2026</span>
+                <span>Setembro, 2026</span>
               </div>
               <h4>Festa da Primavera na Chácara: Música, Ciranda e Piquenique</h4>
               <p>Um sábado especial para reunir avós, pais e crianças para festejar os ciclos da natureza em Piracicaba.</p>
@@ -1974,12 +2957,12 @@
               </div>
             </article>
 
-            <!-- Notícia 2 -->
-            <article class="news-card" onclick="openNewsModal('Oficina de Culinária com Frutas Colhidas do Pomar', 'As turmas da Educação Infantil e dos primeiros anos colheram amoras e mangas e participaram de uma aula divertida de geleias caseiras naturais com a equipe de nutrição escolar.')">
+            <article class="news-card" tabindex="0" role="button"
+              onclick="openNewsModal('Oficina de Culinária com Frutas Colhidas do Pomar', 'As turmas da Educação Infantil e dos primeiros anos colheram amoras e mangas e participaram de uma aula divertida de geleias caseiras naturais com a equipe de nutrição escolar.')">
               <div class="news-meta">
                 <span class="meta-tag" style="background: var(--corange-100); color: var(--corange-800);">Pedagógico</span>
                 <span>•</span>
-                <span>16 de Setembro, 2026</span>
+                <span>Setembro, 2026</span>
               </div>
               <h4>Oficina de Culinária com Frutas Colhidas no Nosso Pomar</h4>
               <p>Como a colheita prática ensina matemática, ciências naturais e respeito aos alimentos saudáveis.</p>
@@ -1989,12 +2972,12 @@
               </div>
             </article>
 
-            <!-- Notícia 3 -->
-            <article class="news-card" onclick="openNewsModal('Assembleia Geral de Cooperados: Reformas do Parquinho', 'Reunião de deliberação das famílias cooperadas para aprovação do projeto do novo circuito de troncos e viveiro de mudas da chácara.')">
+            <article class="news-card" tabindex="0" role="button"
+              onclick="openNewsModal('Assembleia Geral de Cooperados: Reformas do Parquinho', 'Reunião de deliberação das famílias cooperadas para aprovação do projeto do novo circuito de troncos e viveiro de mudas da chácara.')">
               <div class="news-meta">
                 <span class="meta-tag" style="background: var(--cblue-100); color: var(--cblue-800);">Cooperativa</span>
                 <span>•</span>
-                <span>08 de Setembro, 2026</span>
+                <span>Setembro, 2026</span>
               </div>
               <h4>Assembleia Geral de Cooperados: Melhorias no Parquinho de Troncos</h4>
               <p>Famílias reunidas para planejar novas áreas de brincadeiras sustentáveis na chácara.</p>
@@ -2005,11 +2988,11 @@
             </article>
           </div>
 
-          <!-- SUBMÓDULO: JORNAL DA ESCOLA -->
+          <!-- COLUNA 2: JORNAL DA ESCOLA -->
           <div class="newspaper-box" id="submodule-jornal">
             <div class="newspaper-header">
               <div class="newspaper-brand-sub">
-                <div class="newspaper-icon-box">📰</div>
+                <div class="newspaper-icon-box" aria-hidden="true">📰</div>
                 <div>
                   <h3>O Jornal da Coopep</h3>
                   <span>Escrito e ilustrado pelos alunos</span>
@@ -2020,7 +3003,6 @@
               </span>
             </div>
 
-            <!-- Mock da Capa -->
             <div class="newspaper-mock-cover">
               <div class="newspaper-paper-sheet">
                 <div class="paper-masthead">
@@ -2036,12 +3018,12 @@
               </div>
             </div>
 
-            <!-- Botões de Ação do Jornal -->
-            <button class="btn-primary" style="width: 100%; justify-content: center; margin-bottom: 10px;" onclick="openNewspaperModal()">
+            <button class="btn-primary" style="width: 100%; justify-content: center; margin-bottom: 10px;"
+              onclick="openNewspaperModal()">
               <i data-lucide="book-open" style="width: 18px; height: 18px;"></i>
               Abrir e Folhear o Jornal dos Alunos
             </button>
-            <button class="btn-secondary" style="width: 100%; justify-content: center;" onclick="mockDownloadPdf()">
+            <button class="btn-secondary" style="width: 100%; justify-content: center;" onclick="mockDownloadPdf('Jornal-Vozes-da-Chacara-Ed42.pdf')">
               <i data-lucide="download" style="width: 16px; height: 16px; color: var(--cblue-800);"></i>
               Baixar Edição Ilustrada em PDF
             </button>
@@ -2052,13 +3034,224 @@
       </div>
     </section>
 
-    <!-- SEÇÃO: DEPOIMENTOS DE PAIS E MÃES -->
+    <!-- ======================================================== -->
+    <!-- 8. SEÇÃO PRÉVIA DA EQUIPE PEDAGÓGICA                     -->
+    <!-- ======================================================== -->
+    <section class="section-spacing" id="equipe" style="background: rgba(239, 246, 255, 0.45);">
+      <div class="container">
+
+        <div class="section-header-center">
+          <span class="section-badge badge-blue">
+            <span aria-hidden="true">👥</span> Nossa Equipe
+          </span>
+          <h2 class="section-title">
+            Quem acolhe, escuta e caminha junto com seu filho
+          </h2>
+          <p class="section-subtitle">
+            A Escola Coopep investe continuamente na formação do seu corpo docente. Conheça as lideranças da nossa gestão pedagógica.
+          </p>
+        </div>
+
+        <div class="three-col-grid" style="margin-bottom: 30px;">
+
+          <article class="team-card management">
+            <div class="team-card-header">
+              <div>
+                <span class="team-role-tag role-orange">Gestão Pedagógica</span>
+                <h3 class="team-card-name">Shirlei Debussi Pissaia</h3>
+                <div class="team-subrole">Direção Pedagógica</div>
+              </div>
+              <div class="team-icon-circle" style="background: var(--corange-100); color: var(--corange-800);">🏛️</div>
+            </div>
+            <div class="degree-badge">Mestra em Educação</div>
+            <ul class="team-credentials-list">
+              <li>Psicóloga com 20 anos de experiência em processos formativos e inclusão escolar.</li>
+              <li>Mestra em Educação com foco na formação docente e organização curricular.</li>
+              <li>Na Coopep conduzindo a direção pedagógica, orientação e o Projeto de Vida.</li>
+            </ul>
+          </article>
+
+          <article class="team-card management">
+            <div class="team-card-header">
+              <div>
+                <span class="team-role-tag role-blue">Gestão Pedagógica</span>
+                <h3 class="team-card-name">Vanessa Minuzzi Bidinoto</h3>
+                <div class="team-subrole">Coordenação da Educação Infantil e Ensino Fundamental</div>
+              </div>
+              <div class="team-icon-circle" style="background: var(--cblue-100); color: var(--cblue-800);">🎓</div>
+            </div>
+            <div class="degree-badge">Pós-Doutora na ESALQ/USP • Doutora UNIMEP</div>
+            <ul class="team-credentials-list">
+              <li>Pós-Doutora em Educação Inclusiva (ESALQ/USP) e Doutora em Educação (UNIMEP).</li>
+              <li>Licenciada em Pedagogia (UNIP) e Ciências Biológicas (URI); Psicóloga (Anhanguera).</li>
+              <li>Especialista em Gestão Escolar, Psicopedagogia e Educação Especial.</li>
+            </ul>
+          </article>
+
+          <article class="team-card management">
+            <div class="team-card-header">
+              <div>
+                <span class="team-role-tag role-green">Gestão Pedagógica</span>
+                <h3 class="team-card-name">Carolina José Maria</h3>
+                <div class="team-subrole">Orientadora Educacional da Ed. Infantil e Ens. Fundamental</div>
+              </div>
+              <div class="team-icon-circle" style="background: var(--cgreen-100); color: var(--cgreen-800);">🧭</div>
+            </div>
+            <div class="degree-badge">Doutora em Educação UNIMEP • Mestra UNESP</div>
+            <ul class="team-credentials-list">
+              <li>Doutora em Educação pela UNIMEP e Mestra em Ensino de Ciências pela UNESP.</li>
+              <li>Licenciada em Pedagogia (UNINTER) e Ciências (UNIMEP).</li>
+              <li>Especialização em Orientação, Supervisão e Gestão Escolar.</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="team-preview-cta">
+          <div style="max-width: 660px;">
+            <span class="section-badge badge-orange" style="margin-bottom: 8px;">
+              <span>✨</span> Corpo Docente e Apoio Completo
+            </span>
+            <h3 style="font-family: var(--font-title); font-size: 1.45rem; color: var(--cblue-950); margin-bottom: 8px;">
+              Conheça todos os nossos professores polivalentes, especialistas e equipe de apoio
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--slate-600); margin: 0;">
+              Equipe multidisciplinar em Arte, Música, Inglês, Ciências, História, Geografia, Filosofia e secretaria escolar.
+            </p>
+          </div>
+          <button onclick="openFamilyDrawer('manual')" class="btn-primary btn-lg">
+            <i data-lucide="users" style="width: 18px; height: 18px;"></i>
+            Consultar Normas e Rotinas da Equipe
+            <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 9. SEÇÃO DOCUMENTOS & TRANSPARÊNCIA (PPP, ESTATUTO)      -->
+    <!-- ======================================================== -->
+    <section class="section-spacing" id="documentos" style="background: var(--cream-50);">
+      <div class="container">
+
+        <div class="section-header-center">
+          <span class="section-badge badge-blue">
+            <span aria-hidden="true">📜</span> Transparência & Diretrizes
+          </span>
+          <h2 class="section-title">
+            Projeto Pedagógico & Documentos Oficiais
+          </h2>
+          <p class="section-subtitle">
+            Conheça as bases sociointeracionistas da nossa proposta pedagógica e acesse com total transparência os
+            documentos regulamentares da Escola Coopep e da Cooperativa Mantenedora.
+          </p>
+        </div>
+
+        <div class="doc-grid">
+
+          <article class="doc-card">
+            <div>
+              <div class="doc-card-top">
+                <div class="doc-icon-box" style="background: var(--cblue-100); color: var(--cblue-800);">📘</div>
+                <div>
+                  <span class="team-role-tag role-blue">Documento Central</span>
+                  <h3 class="doc-card-title">Projeto Político-Pedagógico (PPP)</h3>
+                </div>
+              </div>
+              <p class="doc-card-desc">
+                Fundamentação teórica construtivista (Piaget e Vygotsky), princípios de convivência e objetivos formativos da Educação Infantil e Fundamental.
+              </p>
+              <div class="doc-meta-tags">
+                <span class="doc-meta-pill">📅 Vigência 2023/2024</span>
+                <span class="doc-meta-pill">📄 PDF Oficial</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button onclick="mockDownloadPdf('PPP-Escola-Coopep-Oficial.pdf')" class="doc-download-btn">
+                <i data-lucide="download" style="width: 15px; height: 15px;"></i>
+                Baixar PPP Oficial
+              </button>
+            </div>
+          </article>
+
+          <article class="doc-card">
+            <div>
+              <div class="doc-card-top">
+                <div class="doc-icon-box" style="background: var(--corange-100); color: var(--corange-800);">📜</div>
+                <div>
+                  <span class="team-role-tag role-orange">Normas & Ensino</span>
+                  <h3 class="doc-card-title">Regimento Escolar</h3>
+                </div>
+              </div>
+              <p class="doc-card-desc">
+                Organização escolar, direitos e deveres dos alunos, critérios de avaliação formativa e normas institucionais registradas.
+              </p>
+              <div class="doc-meta-tags">
+                <span class="doc-meta-pill">📅 Vigência Vigente</span>
+                <span class="doc-meta-pill">📄 PDF Oficial</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button onclick="mockDownloadPdf('Regimento-Escolar-Coopep.pdf')" class="doc-download-btn" style="background: var(--corange-600);">
+                <i data-lucide="download" style="width: 15px; height: 15px;"></i>
+                Baixar Regimento
+              </button>
+            </div>
+          </article>
+
+          <article class="doc-card">
+            <div>
+              <div class="doc-card-top">
+                <div class="doc-icon-box" style="background: var(--cgreen-100); color: var(--cgreen-800);">🤝</div>
+                <div>
+                  <span class="team-role-tag role-green">Cooperativa</span>
+                  <h3 class="doc-card-title">Estatuto Social (JUCESP)</h3>
+                </div>
+              </div>
+              <p class="doc-card-desc">
+                A base societária e jurídica da cooperativa mantenedora sem fins lucrativos: direitos de voto das famílias e governança compartilhada.
+              </p>
+              <div class="doc-meta-tags">
+                <span class="doc-meta-pill">📅 Registrado JUCESP</span>
+                <span class="doc-meta-pill">📄 Lei 5.764/71</span>
+              </div>
+            </div>
+            <div class="doc-card-actions">
+              <button onclick="mockDownloadPdf('Estatuto-Social-JUCESP-Coopep.pdf')" class="doc-download-btn" style="background: var(--cgreen-700);">
+                <i data-lucide="download" style="width: 15px; height: 15px;"></i>
+                Baixar Estatuto
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="dark-cta-banner">
+          <div class="dark-cta-pill">
+            <span>✨</span> Central Completa de Transparência
+          </div>
+          <h3>Acesse a lista de materiais 2026, guias de uniformes e o manual</h3>
+          <p>Tudo o que pais, mães e cooperados precisam para o dia a dia está disponível na nossa gaveta lateral de documentos.</p>
+          <button onclick="openFamilyDrawer('materiais')" class="btn-primary btn-lg" style="background: var(--corange-500);">
+            <i data-lucide="folder-open" style="width: 18px; height: 18px;"></i>
+            Abrir Central da Família & Documentos
+            <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 10. SEÇÃO DEPOIMENTOS                                    -->
+    <!-- ======================================================== -->
     <section class="section-spacing" style="background: var(--white);">
       <div class="container">
-        
+
         <div class="section-header-center">
           <span class="section-badge badge-green">
-            <span>💛</span> Quem Vive a Nossa Escola
+            <span aria-hidden="true">💛</span> Quem Vive a Nossa Escola
           </span>
           <h2 class="section-title">Com a palavra, as famílias que caminham conosco</h2>
           <p class="section-subtitle">
@@ -2067,10 +3260,10 @@
         </div>
 
         <div class="depoimentos-grid">
-          
-          <div class="depoimento-card">
+
+          <blockquote class="depoimento-card">
             <div>
-              <div class="stars-row">
+              <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
@@ -2081,18 +3274,18 @@
                 "Minha filha chega em casa contando sobre as minhocas da composteira e as brincadeiras sob a sombra das árvores. Aqui a infância é valorizada com verdade."
               </p>
             </div>
-            <div class="depoimento-author">
+            <footer class="depoimento-author">
               <div class="author-avatar">MR</div>
               <div class="author-meta">
                 <strong>Marina Rezende</strong>
                 <span>Mãe na Educação Infantil</span>
               </div>
-            </div>
-          </div>
+            </footer>
+          </blockquote>
 
-          <div class="depoimento-card orange">
+          <blockquote class="depoimento-card orange">
             <div>
-              <div class="stars-row">
+              <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
@@ -2103,18 +3296,18 @@
                 "O modelo de cooperativa nos aproxima da escola. Sabemos para onde vai cada investimento e participamos ativamente das conversas pedagógicas."
               </p>
             </div>
-            <div class="depoimento-author">
+            <footer class="depoimento-author">
               <div class="author-avatar orange">RC</div>
               <div class="author-meta">
                 <strong>Rodrigo Castilho</strong>
                 <span>Pai do 6º ano • Cooperado</span>
               </div>
-            </div>
-          </div>
+            </footer>
+          </blockquote>
 
-          <div class="depoimento-card green">
+          <blockquote class="depoimento-card green">
             <div>
-              <div class="stars-row">
+              <div class="stars-row" aria-label="Avaliação 5 de 5 estrelas">
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
@@ -2125,35 +3318,37 @@
                 "As turmas pequenas permitem aos professores enxergar cada criança por inteiro. Meu filho se sente seguro para se expressar e fazer perguntas."
               </p>
             </div>
-            <div class="depoimento-author">
+            <footer class="depoimento-author">
               <div class="author-avatar green">PF</div>
               <div class="author-meta">
                 <strong>Priscila Fernandes</strong>
                 <span>Mãe do 4º ano Fundamental</span>
               </div>
-            </div>
-          </div>
+            </footer>
+          </blockquote>
 
         </div>
 
       </div>
     </section>
 
-    <!-- SEÇÃO: AGENDAMENTO DE VISITA AFETIVA -->
+    <!-- ======================================================== -->
+    <!-- 11. FORMULÁRIO DE AGENDAMENTO DE VISITA                   -->
+    <!-- ======================================================== -->
     <section class="section-spacing" id="visita">
       <div class="container">
-        
+
         <div class="visita-banner">
-          
-          <!-- Lado Esquerdo: Acolhida e Contato -->
+
           <div class="visita-info-side">
             <div>
               <span class="section-badge badge-orange" style="background: var(--corange-600); color: var(--white);">
-                <span>☕</span> Um Convite com Carinho
+                <span aria-hidden="true">☕</span> Um Convite com Carinho
               </span>
               <h3>Venha tomar um café fresco e caminhar pela nossa chácara</h3>
               <p>
-                O melhor jeito de sentir o ar da Coopep é pisar em nossa terra vermelha, ouvir o canto dos pássaros e conversar com nossos educadores.
+                O melhor jeito de sentir o ar da Coopep é pisar em nossa terra vermelha, ouvir o canto dos pássaros e
+                conversar com nossos educadores.
               </p>
             </div>
 
@@ -2164,7 +3359,7 @@
                 </div>
                 <div>
                   <strong style="display: block;">Nosso Endereço:</strong>
-                  <span style="color: #bfdbfe; font-size: 0.78rem;">Av. Dois Córregos, 3526 - Piracicaba / SP</span>
+                  <span style="color: #bfdbfe; font-size: 0.8rem;">Av. Dois Córregos, 3526 - Piracicaba / SP</span>
                 </div>
               </div>
 
@@ -2174,7 +3369,7 @@
                 </div>
                 <div>
                   <strong style="display: block;">Secretaria / WhatsApp:</strong>
-                  <span style="color: #bfdbfe; font-size: 0.78rem;">(19) 3424-3730</span>
+                  <span style="color: #bfdbfe; font-size: 0.8rem;">(19) 3424-3730</span>
                 </div>
               </div>
 
@@ -2184,18 +3379,17 @@
                 </div>
                 <div>
                   <strong style="display: block;">Horário de Acolhimento:</strong>
-                  <span style="color: #bfdbfe; font-size: 0.78rem;">Segunda a Sexta, das 07h às 17h</span>
+                  <span style="color: #bfdbfe; font-size: 0.8rem;">Segunda a Sexta, das 07h às 17h</span>
                 </div>
               </div>
             </div>
 
-            <div style="font-size: 0.78rem; color: #93c5fd; border-top: 1px solid var(--cblue-800); padding-top: 12px; display: flex; align-items: center; gap: 6px;">
-              <i data-lucide="heart" style="width: 14px; height: 14px; color: var(--corange-400);"></i>
+            <div class="visita-footer-note">
+              <i data-lucide="heart" style="width: 15px; height: 15px; color: var(--corange-400);"></i>
               Traga seus pequenos junto! Eles vão adorar o espaço verde.
             </div>
           </div>
 
-          <!-- Lado Direito: Formulário com feedback visual -->
           <div class="visita-form-side">
             <h4>Agende sua visita monitorada</h4>
             <p class="form-subtitle">Preencha seus dados para marcarmos um horário tranquilo para sua família.</p>
@@ -2217,30 +3411,31 @@
                   <label for="form-fase">Ano / Fase de Interesse *</label>
                   <select id="form-fase" required>
                     <option value="" disabled selected>Selecione a fase escolar</option>
-                    <option value="infantil">Educação Infantil (2 a 5 anos)</option>
-                    <option value="fundamental1">Ensino Fundamental I (1º ao 5º ano)</option>
-                    <option value="fundamental2">Ensino Fundamental II (6º ao 9º ano)</option>
-                    <option value="integral">Interesse no Período Integral</option>
+                    <option value="Educação Infantil (2 a 5 anos)">Educação Infantil (2 a 5 anos)</option>
+                    <option value="Ensino Fundamental I (1º ao 5º ano)">Ensino Fundamental I (1º ao 5º ano)</option>
+                    <option value="Ensino Fundamental II (6º ao 9º ano)">Ensino Fundamental II (6º ao 9º ano)</option>
+                    <option value="Período Integral">Interesse no Período Integral</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="form-periodo">Melhor Turno para Visita</label>
                   <select id="form-periodo">
-                    <option value="manha">Período da Manhã (08h às 11h)</option>
-                    <option value="tarde">Período da Tarde (13h30 às 16h30)</option>
+                    <option value="Manhã (08h às 11h)">Período da Manhã (08h às 11h)</option>
+                    <option value="Tarde (13h30 às 16h30)">Período da Tarde (13h30 às 16h30)</option>
                   </select>
                 </div>
               </div>
 
               <div class="form-group" style="margin-bottom: 18px;">
                 <label for="form-obs">Conte um pouquinho sobre o que vocês buscam (opcional)</label>
-                <textarea id="form-obs" rows="2" placeholder="Ex: Buscamos uma escola com mais natureza e menos telas..."></textarea>
+                <textarea id="form-obs" rows="2"
+                  placeholder="Ex: Buscamos uma escola com mais natureza e menos telas..."></textarea>
               </div>
 
-              <!-- Retorno de Envio -->
-              <div class="form-feedback" id="form-feedback-box"></div>
+              <div class="form-feedback" id="form-feedback-box" role="status" aria-live="polite"></div>
 
-              <button type="submit" class="btn-primary" id="form-submit-btn" style="width: 100%; justify-content: center; padding: 14px;">
+              <button type="submit" class="btn-primary" id="form-submit-btn"
+                style="width: 100%; justify-content: center; padding: 14px;">
                 <i data-lucide="send" style="width: 16px; height: 16px;"></i>
                 Enviar Solicitação de Visita
               </button>
@@ -2251,77 +3446,80 @@
 
       </div>
     </section>
+
   </main>
 
-  <!-- RODAPÉ INSTITUCIONAL -->
+  <!-- ======================================================== -->
+  <!-- 12. RODAPÉ INSTITUCIONAL                                 -->
+  <!-- ======================================================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        
-        <!-- Coluna 1: Sobre a Cooperativa -->
+
         <div>
-          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
-            <div style="width: 38px; height: 38px; background: var(--cblue-800); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--cgreen-400);">
+          <div class="footer-brand-row">
+            <div class="footer-brand-icon">
               <i data-lucide="trees" style="width: 20px; height: 20px;"></i>
             </div>
             <div>
-              <strong style="font-family: var(--font-title); font-size: 1.15rem; color: var(--white); display: block;">Escola Coopep</strong>
-              <span style="font-size: 0.72rem; color: var(--cgreen-400);">Cooperativa Educacional de Piracicaba</span>
+              <strong class="footer-brand-title">Escola Coopep</strong>
+              <span class="footer-brand-sub">Cooperativa Educacional de Piracicaba</span>
             </div>
           </div>
-          <p style="font-size: 0.82rem; line-height: 1.6; color: #94a3b8;">
-            Fundada em 1989. Uma cooperativa sem fins lucrativos gerida por pais, unindo natureza, sólida proposta sociointeracionista e carinho pedagógico.
+          <p class="footer-about-text">
+            Fundada em 1989 (cooperativa constituída em 1992). Uma instituição sem fins lucrativos gerida por pais,
+            unindo natureza, sólida proposta sociointeracionista e carinho pedagógico.
           </p>
           <div class="footer-social-icons">
-            <a href="https://wa.me/551934243730" target="_blank" class="footer-icon-btn" title="WhatsApp"><i data-lucide="message-circle" style="width: 16px; height: 16px;"></i></a>
-            <a href="mailto:secretaria@escolacoopep.com.br" class="footer-icon-btn" title="E-mail"><i data-lucide="mail" style="width: 16px; height: 16px;"></i></a>
-            <a href="https://maps.google.com/?q=Av.+Dois+Córregos,+3526+-+Piracicaba" target="_blank" class="footer-icon-btn" title="Mapa"><i data-lucide="map-pin" style="width: 16px; height: 16px;"></i></a>
+            <a href="https://wa.me/551934243730" target="_blank" rel="noopener noreferrer" class="footer-icon-btn"
+              title="WhatsApp" aria-label="WhatsApp"><i data-lucide="message-circle" style="width: 16px; height: 16px;"></i></a>
+            <a href="mailto:secretaria@escolacoopep.com.br" class="footer-icon-btn" title="E-mail"
+              aria-label="E-mail"><i data-lucide="mail" style="width: 16px; height: 16px;"></i></a>
+            <a href="https://maps.google.com/?q=Av.+Dois+Córregos,+3526+-+Piracicaba" target="_blank"
+              rel="noopener noreferrer" class="footer-icon-btn" title="Mapa" aria-label="Localização no Google Maps"><i
+                data-lucide="map-pin" style="width: 16px; height: 16px;"></i></a>
           </div>
         </div>
 
-        <!-- Coluna 2: A Escola -->
         <div>
           <h5 class="footer-col-title">A Escola</h5>
           <ul class="footer-links-list">
             <li><a href="#chacara">A Chácara de 6.000 m²</a></li>
-            <li><a href="#escola">Proposta Pedagógica</a></li>
             <li><a href="#ciclos">Educação Infantil</a></li>
             <li><a href="#ciclos">Ensino Fundamental</a></li>
             <li><a href="#ciclos">Período Integral</a></li>
+            <li><a href="#equipe">Equipe & Educadores</a></li>
           </ul>
         </div>
 
-        <!-- Coluna 3: A Cooperativa -->
         <div>
-          <h5 class="footer-col-title">A Cooperativa</h5>
+          <h5 class="footer-col-title">Área da Família</h5>
           <ul class="footer-links-list">
-            <li><a href="#cooperativa">O Modelo Cooperativo</a></li>
-            <li><a href="#cooperativa">Conselho de Administração</a></li>
-            <li><a href="#cooperativa">Assembleias de Famílias</a></li>
-            <li><a href="#cooperativa">Estatuto Social</a></li>
-            <li><a href="#cooperativa">Portal do Cooperado</a></li>
+            <li><button onclick="openFamilyDrawer('materiais')">Lista de Materiais 2026</button></li>
+            <li><button onclick="openFamilyDrawer('uniforme')">Guia de Uniformes & Lojas</button></li>
+            <li><button onclick="openFamilyDrawer('manual')">Manual do Estudante Digital</button></li>
+            <li><a href="#documentos">Projeto Pedagógico & PPP</a></li>
+            <li><a href="#documentos">Estatuto JUCESP</a></li>
           </ul>
         </div>
 
-        <!-- Coluna 4: Contato & Horários -->
         <div>
           <h5 class="footer-col-title">Atendimento</h5>
-          <p style="font-size: 0.82rem; line-height: 1.5; margin-bottom: 8px;">
+          <address style="font-style: normal; font-size: 0.82rem; line-height: 1.6; margin-bottom: 10px;">
             Av. Dois Córregos, 3526<br>
             Piracicaba - SP<br>
             CEP 13420-835
+          </address>
+          <p style="font-weight: 700; color: var(--white); font-size: 0.88rem;">
+            Tel / WhatsApp: (19) 3424-3730
           </p>
-          <p style="font-weight: 700; color: var(--white); font-size: 0.85rem;">
-            Tel: (19) 3424-3730
-          </p>
-          <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 4px;">
+          <p style="font-size: 0.76rem; color: #94a3b8; margin-top: 4px;">
             Segunda a Sexta: 07h às 17h
           </p>
         </div>
 
       </div>
 
-      <!-- Barra Inferior -->
       <div class="footer-bottom-bar">
         <p>© 2026 Escola Coopep - Cooperativa Educacional de Piracicaba. Todos os direitos reservados.</p>
         <p>Educar com afeto, natureza e participação familiar.</p>
@@ -2329,18 +3527,163 @@
     </div>
   </footer>
 
-  <!-- MODAL: LEITOR DO JORNAL DOS ALUNOS ("Vozes da Chácara") -->
-  <div class="coopep-modal" id="modal-newspaper">
+  <!-- ======================================================== -->
+  <!-- 13. DRAWER LATERAL: ÁREA DA FAMÍLIA & COOPERADO          -->
+  <!-- ======================================================== -->
+  <div class="drawer-overlay" id="familyDrawerOverlay" onclick="closeFamilyDrawer(event)">
+    <div class="drawer-panel" onclick="event.stopPropagation()">
+      <div class="drawer-header">
+        <h3>
+          <i data-lucide="graduation-cap" style="width: 22px; height: 22px; color: var(--corange-400);"></i>
+          Área da Família & Cooperado
+        </h3>
+        <button class="drawer-close-btn" onclick="closeFamilyDrawer()" aria-label="Fechar gaveta">
+          <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+        </button>
+      </div>
+
+      <!-- Abas Internas -->
+      <div class="drawer-nav-tabs">
+        <button class="drawer-tab-btn active" id="dtab-btn-materiais" onclick="switchDrawerTab('materiais')">
+          <i data-lucide="clipboard-list" style="width: 16px; height: 16px;"></i>
+          Lista de Materiais 2026
+        </button>
+        <button class="drawer-tab-btn" id="dtab-btn-uniforme" onclick="switchDrawerTab('uniforme')">
+          <i data-lucide="shirt" style="width: 16px; height: 16px;"></i>
+          Uniformes & Lojas
+        </button>
+        <button class="drawer-tab-btn" id="dtab-btn-manual" onclick="switchDrawerTab('manual')">
+          <i data-lucide="book" style="width: 16px; height: 16px;"></i>
+          Manual do Aluno
+        </button>
+      </div>
+
+      <!-- Conteúdo das Abas -->
+      <div class="drawer-body">
+        
+        <!-- PANE: MATERIAIS -->
+        <div class="drawer-pane active" id="dpane-materiais">
+          <div class="drawer-card" style="border-left: 4px solid var(--corange-500);">
+            <h4><i data-lucide="bell" style="width: 16px; height: 16px; color: var(--corange-600);"></i> Entrega de Materiais 2026</h4>
+            <p>Os itens coletivos e cadernos devem ser entregues devidamente etiquetados com o <strong>nome completo do aluno e ano escolar</strong> no primeiro dia letivo.</p>
+          </div>
+
+          <div class="drawer-card">
+            <h4><i data-lucide="shopping-bag" style="width: 16px; height: 16px; color: var(--cblue-700);"></i> Desconto nos Livros da Editora Moderna</h4>
+            <p>As famílias associadas possuem desconto especial pelo convênio SomosCoop. Para adquirir, acesse <strong>modernacompartilha.com.br</strong>, selecione <em>Piracicaba > Escola Coopep</em> e insira o CPF do responsável financeiro cooperado.</p>
+          </div>
+
+          <div class="drawer-card">
+            <h4>Educação Infantil (G2 ao G5)</h4>
+            <div class="drawer-sublist">
+              <div class="drawer-subitem">
+                <span>Grupo 2 (G2) • 2 anos</span>
+                <button onclick="mockDownloadPdf('Materiais-2026-G2.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+              </div>
+              <div class="drawer-subitem">
+                <span>Grupo 3 (G3) • 3 anos</span>
+                <button onclick="mockDownloadPdf('Materiais-2026-G3.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+              </div>
+              <div class="drawer-subitem">
+                <span>Grupo 4 (G4) • 4 anos</span>
+                <button onclick="mockDownloadPdf('Materiais-2026-G4.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+              </div>
+              <div class="drawer-subitem">
+                <span>Grupo 5 (G5) • 5 anos</span>
+                <button onclick="mockDownloadPdf('Materiais-2026-G5.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="drawer-card">
+            <h4>Ensino Fundamental I e II</h4>
+            <div class="drawer-sublist">
+              <div class="drawer-subitem">
+                <span>1º ao 3º Ano EF I (Coleção Buriti Plus)</span>
+                <button onclick="mockDownloadPdf('Materiais-2026-1ao3ano.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+              </div>
+              <div class="drawer-subitem">
+                <span>4º e 5º Anos EF I (Coleção Buriti Plus)</span>
+                <button onclick="mockDownloadPdf('Materiais-2026-4e5ano.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+              </div>
+              <div class="drawer-subitem">
+                <span>6º ao 9º Ano EF II (Coleção Araribá Plus)</span>
+                <button onclick="mockDownloadPdf('Materiais-2026-Fund2.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE: UNIFORME -->
+        <div class="drawer-pane" id="dpane-uniforme">
+          <div class="drawer-card">
+            <h4><i data-lucide="info" style="width: 16px; height: 16px; color: var(--cblue-700);"></i> Diretrizes de Uso</h4>
+            <p><strong>Dia a dia:</strong> Camiseta oficial da escola, bermuda/calça e tênis confortável para as brincadeiras na terra.<br><br>
+            <strong>Saídas de Estudo do Meio:</strong> Obrigatório o uso da <em>camiseta branca oficial com o logotipo da Coopep</em> para fácil identificação e segurança coletiva.<br><br>
+            <strong>Educação Física:</strong> Calçado esportivo com meia e camiseta oficial.</p>
+          </div>
+
+          <div class="drawer-card">
+            <h4>Confecções Borges (Fornecedora Oficial)</h4>
+            <p>Av. Manoel Conceição, 907 - Vila Rezende, Piracicaba<br>
+            Telefone: (19) 3371-7099</p>
+            <div style="margin-top: 10px;">
+              <a href="tel:1933717099" class="btn-secondary" style="font-size: 0.8rem; padding: 6px 14px;">
+                <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Ligar para a Loja
+              </a>
+            </div>
+          </div>
+
+          <div class="drawer-card">
+            <h4>Unisport Piracicaba (Fornecedora Oficial)</h4>
+            <p>Rua Boa Morte, 1236 - Centro, Piracicaba<br>
+            Telefone: (19) 3301-1777 • WhatsApp: (19) 9840-8914</p>
+            <div style="margin-top: 10px;">
+              <a href="https://wa.me/5519998408914?text=Olá!%20Gostaria%20de%20consultar%20valores%20do%20uniforme%20da%20Escola%20Coopep." target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.8rem; padding: 6px 14px; background: #25d366;">
+                <i data-lucide="message-circle" style="width: 14px; height: 14px;"></i> Falar no WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE: MANUAL DO ALUNO -->
+        <div class="drawer-pane" id="dpane-manual">
+          <div class="drawer-card" style="border-left: 4px solid var(--cgreen-600);">
+            <h4><i data-lucide="check-circle" style="width: 16px; height: 16px; color: var(--cgreen-600);"></i> Resumo de Normas e Rotinas</h4>
+            <p><strong>Pontualidade:</strong> Tolerância de 10 minutos após o início das aulas. O limite legal de faltas para promoção no ano letivo é de no máximo 25% dos dias previstos.<br><br>
+            <strong>Almoço no Período Integral:</strong> Dividido em dois grupos (Grupo 1 às 11h e Grupo 2 às 11h30). Cada criança deve trazer toalha de banho e higiene identificadas.<br><br>
+            <strong>Aparelhos Celulares:</strong> É proibido o uso de celulares e jogos eletrônicos durante as aulas e intervalos, preservando o convívio saudável sob o bosque.<br><br>
+            <strong>Biblioteca:</strong> Empréstimo de até 2 livros simultâneos por aluno com prazo de 7 dias úteis.</p>
+          </div>
+
+          <button onclick="mockDownloadPdf('Manual-do-Estudante-Escola-Coopep.pdf')" class="btn-primary" style="width: 100%; justify-content: center;">
+            <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+            Baixar Manual do Estudante Completo (PDF)
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 14. MODAIS INTERATIVOS & WHATSAPP FLUTUANTE              -->
+  <!-- ======================================================== -->
+  
+  <!-- MODAL: LEITOR DO JORNAL DOS ALUNOS -->
+  <div class="coopep-modal" id="modal-newspaper" role="dialog" aria-modal="true"
+    aria-labelledby="newspaper-modal-title">
     <div class="modal-paper-container">
       <div class="modal-paper-top">
         <div style="display: flex; align-items: center; gap: 8px;">
           <span style="font-size: 1.4rem;">📰</span>
           <div>
-            <h4>Vozes da Chácara — Edição nº 42</h4>
+            <h4 id="newspaper-modal-title">Vozes da Chácara — Edição nº 42</h4>
             <span style="font-size: 0.72rem; color: var(--slate-600);">Produzido pelas crianças e educadores da Coopep</span>
           </div>
         </div>
-        <button onclick="closeNewspaperModal()" style="background: none; cursor: pointer; color: var(--slate-600);">
+        <button onclick="closeNewspaperModal()" aria-label="Fechar leitor do jornal"
+          style="background: none; cursor: pointer; color: var(--slate-600);">
           <i data-lucide="x" style="width: 22px; height: 22px;"></i>
         </button>
       </div>
@@ -2354,15 +3697,15 @@
             <h3 style="font-family: var(--font-title); font-size: 1.6rem; color: var(--cblue-950); margin-top: 4px;">
               "A terra não é só o chão que a gente pisa: é uma casa cheia de vida!"
             </h3>
-            <p style="font-size: 0.75rem; color: var(--slate-500);">Reportagem dos alunos do 4º e 5º ano • Orientação: Professoras Lúcia e Mariana</p>
+            <p style="font-size: 0.75rem; color: var(--slate-500);">Reportagem dos alunos do 4º e 5º ano • Orientação: Professoras Polivalentes</p>
           </div>
 
           <div style="font-size: 0.88rem; color: var(--slate-700); line-height: 1.65;">
             <p style="margin-bottom: 12px;">
-              Quando o sino toca na Coopep, o cheiro gostoso de terra molhada avisa que as aulas práticas começaram. 
-              Nesta semana, fomos até a composteira para ver como as cascas de maçã e folhas secas viram adubo fofinho para os pezinhos de alface e tomate.
+              Quando o sino toca na Coopep, o cheiro gostoso de terra molhada avisa que as aulas práticas começaram.
+              Nesta semana, fomos até a composteira para ver como as cascas de maçã e folhas secas viram adubo fofinho
+              para os pezinhos de alface e tomate.
             </p>
-            
             <div style="background: var(--corange-50); border: 1.5px solid var(--corange-200); border-radius: var(--radius-md); padding: 12px; margin-bottom: 14px;">
               <strong style="font-family: var(--font-title); color: var(--corange-700); display: block; font-size: 0.85rem; margin-bottom: 4px;">
                 Poesia Coletiva dos Alunos:
@@ -2372,21 +3715,15 @@
                 Aqui a gente sobe, inventa e a brincadeira nunca cessa!"
               </p>
             </div>
-
             <p>
               As fotografias desta edição foram tiradas pelos próprios estudantes do Fundamental II com as câmeras digitais da oficina de comunicação.
             </p>
-          </div>
-
-          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--slate-200); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem;">
-            <span style="color: var(--slate-500);">Página 2 de 8</span>
-            <span style="font-family: var(--font-title); color: var(--cblue-900); font-weight: 700;">Distribuição gratuita aos cooperados</span>
           </div>
         </div>
       </div>
 
       <div class="modal-footer">
-        <button class="btn-secondary" onclick="mockDownloadPdf()" style="font-size: 0.82rem;">
+        <button class="btn-secondary" onclick="mockDownloadPdf('Jornal-Vozes-da-Chacara-Ed42.pdf')" style="font-size: 0.82rem;">
           <i data-lucide="download" style="width: 14px; height: 14px;"></i> Baixar PDF
         </button>
         <button class="btn-primary" onclick="closeNewspaperModal()" style="font-size: 0.82rem;">
@@ -2397,51 +3734,66 @@
   </div>
 
   <!-- MODAL: DETALHES DE NOTÍCIAS -->
-  <div class="coopep-modal" id="modal-news">
+  <div class="coopep-modal" id="modal-news" role="dialog" aria-modal="true" aria-labelledby="news-title-target">
     <div class="modal-paper-container" style="max-width: 540px; border-color: var(--cblue-300);">
       <div class="modal-paper-top" style="background: var(--cblue-50); border-color: var(--cblue-200);">
         <span class="meta-tag" style="background: var(--cblue-200); color: var(--cblue-900);">Acontece na Coopep</span>
-        <button onclick="closeNewsModal()" style="background: none; cursor: pointer; color: var(--slate-600);">
+        <button onclick="closeNewsModal()" aria-label="Fechar notícia"
+          style="background: none; cursor: pointer; color: var(--slate-600);">
           <i data-lucide="x" style="width: 20px; height: 20px;"></i>
         </button>
       </div>
       <div class="modal-body-scroll" style="padding: 24px;">
-        <h3 id="news-title-target" style="font-family: var(--font-title); font-size: 1.35rem; color: var(--cblue-950); margin-bottom: 12px; line-height: 1.25;"></h3>
+        <h3 id="news-title-target"
+          style="font-family: var(--font-title); font-size: 1.35rem; color: var(--cblue-950); margin-bottom: 12px; line-height: 1.25;">
+        </h3>
         <p id="news-body-target" style="font-size: 0.9rem; color: var(--slate-700); line-height: 1.65;"></p>
       </div>
       <div class="modal-footer">
-        <button class="btn-primary" onclick="closeNewsModal()" style="background: var(--cblue-800); font-size: 0.85rem;">
+        <button class="btn-primary" onclick="closeNewsModal()"
+          style="background: var(--cblue-800); font-size: 0.85rem;">
           Entendido
         </button>
       </div>
     </div>
   </div>
 
-  <!-- JAVASCRIPT NATIVO (Sem dependências além dos ícones) -->
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/551934243730?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20Escola%20Coopep." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn"
+    aria-label="Conversar com a secretaria pelo WhatsApp">
+    <i data-lucide="message-circle" style="width: 26px; height: 26px;"></i>
+    <span class="whatsapp-tooltip">Fale com a Secretaria</span>
+  </a>
+
+  <!-- ======================================================== -->
+  <!-- JAVASCRIPT INTEGRADO                                     -->
+  <!-- ======================================================== -->
   <script>
     // Inicialização dos ícones Lucide
-    lucide.createIcons();
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
 
     // 1. Menu Mobile Drawer
     const mobileToggleBtn = document.getElementById('mobile-toggle-btn');
     const mobileDrawer = document.getElementById('mobile-drawer');
     const menuBarsIcon = document.getElementById('menu-icon-bars');
     const menuCloseIcon = document.getElementById('menu-icon-close');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    mobileToggleBtn.addEventListener('click', () => {
-      const isOpen = mobileDrawer.classList.toggle('open');
-      menuBarsIcon.style.display = isOpen ? 'none' : 'block';
-      menuCloseIcon.style.display = isOpen ? 'block' : 'none';
-    });
+    function toggleMobileMenu(forceClose = false) {
+      if (!mobileDrawer || !mobileToggleBtn) return;
+      const isOpen = forceClose ? false : !mobileDrawer.classList.contains('open');
+      mobileDrawer.classList.toggle('open', isOpen);
+      mobileToggleBtn.setAttribute('aria-expanded', String(isOpen));
+      if (menuBarsIcon) menuBarsIcon.style.display = isOpen ? 'none' : 'block';
+      if (menuCloseIcon) menuCloseIcon.style.display = isOpen ? 'block' : 'none';
+    }
 
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
-        menuBarsIcon.style.display = 'block';
-        menuCloseIcon.style.display = 'none';
-      });
-    });
+    if (mobileToggleBtn) {
+      mobileToggleBtn.addEventListener('click', () => toggleMobileMenu());
+    }
 
     // 2. Abas dos Ciclos Educacionais
     const tabButtons = document.querySelectorAll('.tab-btn');
@@ -2449,10 +3801,14 @@
 
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        tabButtons.forEach(b => b.classList.remove('active'));
+        tabButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
         cyclePanels.forEach(p => p.classList.remove('active'));
 
         btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
         const targetId = btn.getAttribute('data-tab');
         const targetPanel = document.getElementById(targetId);
         if (targetPanel) {
@@ -2461,158 +3817,145 @@
       });
     });
 
-    // 3. Simulador CMS de Módulos Opcionais
-    const cmsTrigger = document.getElementById('cms-toggle-trigger');
-    const cmsModalPanel = document.getElementById('cms-modal-panel');
-    const cmsCloseBtn = document.getElementById('cms-close-btn');
+    // 3. Mega Menu Dropdown Acessível (Desktop)
+    const navEscolaDropdown = document.getElementById('nav-escola-dropdown');
+    const navEscolaTrigger = navEscolaDropdown ? navEscolaDropdown.querySelector('.nav-dropdown-trigger') : null;
 
-    const toggleNewsCheck = document.getElementById('toggle-news-check');
-    const togglePaperCheck = document.getElementById('toggle-paper-check');
-    const cmsStatusBadge = document.getElementById('cms-status-badge');
+    if (navEscolaDropdown && navEscolaTrigger) {
+      navEscolaTrigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = navEscolaDropdown.classList.toggle('open');
+        navEscolaTrigger.setAttribute('aria-expanded', String(isOpen));
+      });
 
-    const submoduleNoticias = document.getElementById('submodule-noticias');
-    const submoduleJornal = document.getElementById('submodule-jornal');
-    const comunicacaoSection = document.getElementById('comunicacao-section');
-    const comunicacaoGrid = document.getElementById('comunicacao-grid');
-    const navComunicacaoLink = document.getElementById('nav-comunicacao-link');
-    const mobileComunicacaoLink = document.getElementById('mobile-comunicacao-link');
-
-    cmsTrigger.addEventListener('click', () => {
-      cmsModalPanel.classList.toggle('open');
-    });
-
-    cmsCloseBtn.addEventListener('click', () => {
-      cmsModalPanel.classList.remove('open');
-    });
-
-    function updateCMSLayout() {
-      const showNews = toggleNewsCheck.checked;
-      const showPaper = togglePaperCheck.checked;
-
-      // Visibilidade individual dos blocos
-      submoduleNoticias.style.display = showNews ? 'flex' : 'none';
-      submoduleJornal.style.display = showPaper ? 'block' : 'none';
-
-      // Reorganização fluida de grid caso apenas 1 esteja ativo
-      if (showNews && !showPaper) {
-        comunicacaoGrid.style.gridTemplateColumns = '1fr';
-      } else if (!showNews && showPaper) {
-        comunicacaoGrid.style.gridTemplateColumns = '1fr';
-      } else if (window.innerWidth >= 992) {
-        comunicacaoGrid.style.gridTemplateColumns = '1.25fr 0.95fr';
-      }
-
-      // Se ambos estiverem desligados, ocultar a seção e o item de menu sem buracos
-      if (!showNews && !showPaper) {
-        comunicacaoSection.style.display = 'none';
-        navComunicacaoLink.style.display = 'none';
-        mobileComunicacaoLink.style.display = 'none';
-        cmsStatusBadge.textContent = 'Essencial (Sem Mídias)';
-        cmsStatusBadge.style.color = 'var(--slate-600)';
-        cmsStatusBadge.style.background = 'var(--cream-200)';
-      } else {
-        comunicacaoSection.style.display = 'block';
-        navComunicacaoLink.style.display = 'inline-flex';
-        mobileComunicacaoLink.style.display = 'flex';
-
-        if (showNews && showPaper) {
-          cmsStatusBadge.textContent = 'Completo';
-          cmsStatusBadge.style.color = 'var(--cgreen-700)';
-          cmsStatusBadge.style.background = 'var(--cgreen-100)';
-        } else if (showNews) {
-          cmsStatusBadge.textContent = 'Apenas Notícias';
-          cmsStatusBadge.style.color = 'var(--cblue-800)';
-          cmsStatusBadge.style.background = 'var(--cblue-100)';
-        } else {
-          cmsStatusBadge.textContent = 'Apenas Jornal';
-          cmsStatusBadge.style.color = 'var(--corange-800)';
-          cmsStatusBadge.style.background = 'var(--corange-100)';
+      document.addEventListener('click', (e) => {
+        if (!navEscolaDropdown.contains(e.target)) {
+          navEscolaDropdown.classList.remove('open');
+          navEscolaTrigger.setAttribute('aria-expanded', 'false');
         }
-      }
+      });
     }
 
-    toggleNewsCheck.addEventListener('change', updateCMSLayout);
-    togglePaperCheck.addEventListener('change', updateCMSLayout);
-
-    // 4. Modais
+    // 4. Modais (Jornal e Notícias)
     const modalNewspaper = document.getElementById('modal-newspaper');
     const modalNews = document.getElementById('modal-news');
     const newsTitleTarget = document.getElementById('news-title-target');
     const newsBodyTarget = document.getElementById('news-body-target');
 
     function openNewspaperModal() {
-      modalNewspaper.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      lucide.createIcons();
+      if (modalNewspaper) {
+        modalNewspaper.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function closeNewspaperModal() {
-      modalNewspaper.classList.remove('active');
-      document.body.style.overflow = 'auto';
+      if (modalNewspaper) {
+        modalNewspaper.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
     }
 
     function openNewsModal(title, text) {
-      newsTitleTarget.textContent = title;
-      newsBodyTarget.textContent = text;
-      modalNews.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      lucide.createIcons();
+      if (newsTitleTarget) newsTitleTarget.textContent = title;
+      if (newsBodyTarget) newsBodyTarget.textContent = text;
+      if (modalNews) {
+        modalNews.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     function closeNewsModal() {
-      modalNews.classList.remove('active');
-      document.body.style.overflow = 'auto';
+      if (modalNews) {
+        modalNews.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
     }
 
-    // Fechar ao clicar fora da caixa do modal
     window.addEventListener('click', (e) => {
-      if (e.target === modalNewspaper) closeNewspaperModal();
-      if (e.target === modalNews) closeNewsModal();
+      if (modalNewspaper && e.target === modalNewspaper) closeNewspaperModal();
+      if (modalNews && e.target === modalNews) closeNewsModal();
     });
 
-    // 5. Download Simulado de PDF
-    function mockDownloadPdf() {
-      const toast = document.createElement('div');
-      toast.style.position = 'fixed';
-      toast.style.top = '20px';
-      toast.style.right = '20px';
-      toast.style.zIndex = '999';
-      toast.style.background = 'var(--cblue-950)';
-      toast.style.color = 'var(--white)';
-      toast.style.padding = '14px 20px';
-      toast.style.borderRadius = 'var(--radius-lg)';
-      toast.style.border = '2px solid var(--corange-500)';
-      toast.style.boxShadow = 'var(--shadow-lg)';
-      toast.style.fontSize = '0.85rem';
-      toast.style.fontWeight = '700';
-      toast.innerHTML = '📥 Download preparado: <strong>Vozes-da-Chacara-Edicao-42.pdf</strong>';
-      document.body.appendChild(toast);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeNewspaperModal();
+        closeNewsModal();
+        closeFamilyDrawer();
+        toggleMobileMenu(true);
+      }
+    });
 
-      setTimeout(() => {
-        toast.remove();
-      }, 3500);
+    // 5. Drawer da Família
+    const familyDrawerOverlay = document.getElementById('familyDrawerOverlay');
+
+    function openFamilyDrawer(tabName = 'materiais') {
+      if (familyDrawerOverlay) {
+        familyDrawerOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        switchDrawerTab(tabName);
+      }
     }
 
-    // 6. Formulário de Visita
+    function closeFamilyDrawer(e) {
+      if (familyDrawerOverlay) {
+        familyDrawerOverlay.classList.remove('open');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function switchDrawerTab(tabId) {
+      document.querySelectorAll('.drawer-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.drawer-pane').forEach(p => p.classList.remove('active'));
+
+      const activeBtn = document.getElementById(`dtab-btn-${tabId}`);
+      const activePane = document.getElementById(`dpane-${tabId}`);
+
+      if (activeBtn) activeBtn.classList.add('active');
+      if (activePane) activePane.classList.add('active');
+    }
+
+    // 6. Download Simulado de Arquivos
+    function mockDownloadPdf(filename) {
+      const toast = document.createElement('div');
+      toast.style.cssText = 'position:fixed;top:20px;right:20px;z-index:999;background:var(--cblue-950);color:var(--white);padding:14px 20px;border-radius:var(--radius-lg);border:2px solid var(--corange-500);box-shadow:var(--shadow-lg);font-size:0.85rem;font-weight:700;';
+      toast.innerHTML = `📥 Download iniciado: <strong>${filename}</strong>`;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3500);
+    }
+
+    // 7. Formulário de Agendamento com Envio Estruturado para WhatsApp
     function handleFormSubmit(e) {
       e.preventDefault();
       const nome = document.getElementById('form-nome').value;
       const fone = document.getElementById('form-fone').value;
+      const fase = document.getElementById('form-fase').value;
+      const periodo = document.getElementById('form-periodo').value;
+      const obs = document.getElementById('form-obs').value;
       const feedback = document.getElementById('form-feedback-box');
       const submitBtn = document.getElementById('form-submit-btn');
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Agendando carinhosamente...';
+      submitBtn.innerHTML = 'Enviando agendamento...';
+
+      const zapText = encodeURIComponent(
+        `Olá, Secretaria da Escola Coopep! Meu nome é ${nome} (${fone}). Gostaria de agendar uma visita para conhecer a chácara.\n• Interesse: ${fase}\n• Melhor turno: ${periodo}${obs ? `\n• Observação: ${obs}` : ''}`
+      );
 
       setTimeout(() => {
         feedback.style.display = 'block';
-        feedback.innerHTML = `Que alegria, <strong>${nome}</strong>! Recebemos sua solicitação. Nossa equipe entrará em contato pelo WhatsApp <strong>${fone}</strong> para marcar o café e a caminhada pela chácara com sua família!`;
-        
+        feedback.innerHTML = `
+          Que alegria, <strong>${nome}</strong>! Recebemos seu pedido de visita.<br>
+          <a href="https://wa.me/551934243730?text=${zapText}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;text-decoration:underline;color:#ffffff;font-weight:800;">
+            👉 Clique aqui para confirmar diretamente pelo WhatsApp da Secretaria
+          </a>
+        `;
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Pedido Enviado com Sucesso! ✔';
+        submitBtn.innerHTML = 'Solicitação Registrada ✔';
         document.getElementById('visita-form').reset();
-      }, 700);
+      }, 500);
     }
   </script>
 </body>
+
 </html>
