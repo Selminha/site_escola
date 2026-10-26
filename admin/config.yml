@@ -1,35 +1,53 @@
+# Configuração do repositório no GitHub
 backend:
   name: github
-  repo: selminha/site_escola
+  repo: SEU_USUARIO_GITHUB/NOME_DO_REPOSITORIO # Substitua pelo seu repo (ex: escola-coopep)
   branch: main
 
-# Onde as imagens e PDFs enviados pelo painel serão salvos no GitHub
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+# Onde serão salvas as imagens e os PDFs do jornal
+media_folder: "uploads"
+public_folder: "/uploads"
+
+# Idioma da interface em Português
+locale: "pt"
 
 collections:
-  # Coleção de Notícias e Avisos
+  # ----------------------------------------------------
+  # 1. COLEÇÃO: NOTÍCIAS & AVISOS DA COMUNIDADE
+  # ----------------------------------------------------
   - name: "noticias"
     label: "Notícias & Avisos"
-    folder: "_noticias" # Pasta onde os arquivos serão salvos
+    label_singular: "Notícia"
+    folder: "content/noticias"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: "json"
     fields:
       - { label: "Título da Notícia", name: "title", widget: "string" }
-      - { label: "Data de Publicação", name: "date", widget: "datetime" }
-      - { label: "Categoria", name: "categoria", widget: "select", options: ["Vida Escolar", "Pedagógico", "Cooperativa de Pais", "Eventos"] }
-      - { label: "Imagem de Destaque", name: "image", widget: "image", required: false }
-      - { label: "Resumo", name: "summary", widget: "string" }
-      - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - { label: "Data de Publicação", name: "date", widget: "datetime", format: "DD/MM/YYYY", date_format: "DD/MM/YYYY", time_format: false }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options: ["Vida Escolar", "Pedagógico", "Cooperativa", "Eventos"]
+        default: "Vida Escolar"
+      - { label: "Resumo Curto (para o card)", name: "summary", widget: "string" }
+      - { label: "Texto Completo", name: "body", widget: "markdown" }
 
-  # Coleção do Jornal da Escola
+  # ----------------------------------------------------
+  # 2. COLEÇÃO: JORNAL DA ESCOLA ("VOZES DA CHÁCARA")
+  # ----------------------------------------------------
   - name: "jornal"
-    label: "Edições do Jornal Escolar"
-    folder: "_jornais"
+    label: "Edições do Jornal"
+    label_singular: "Edição do Jornal"
+    folder: "content/jornal"
     create: true
+    slug: "edicao-{{numero}}"
+    format: "json"
     fields:
-      - { label: "Título da Edição", name: "title", widget: "string", default: "Vozes da Chácara" }
-      - { label: "Número da Edição", name: "numero", widget: "number" }
-      - { label: "Semestre Letivo", name: "semestre", widget: "string" }
-      - { label: "Destaque Principal", name: "destaque", widget: "string" }
-      - { label: "Arquivo PDF da Edição", name: "pdf", widget: "file" }
+      - { label: "Número da Edição", name: "numero", widget: "number", value_type: "int" }
+      - { label: "Semestre / Ano", name: "periodo", widget: "string", default: "2026.2" }
+      - { label: "Título / Tema da Edição", name: "title", widget: "string" }
+      - { label: "Lema / Frase em Destaque", name: "motto", widget: "string" }
+      - { label: "Reportagem Principal (Destaque da Capa)", name: "featured_article", widget: "string" }
+      - { label: "Texto Completo / Artigo Principal", name: "content", widget: "markdown" }
+      - { label: "Arquivo PDF Completo da Edição", name: "pdf_file", widget: "file", required: false }

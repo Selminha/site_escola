@@ -91,7 +91,9 @@
       --shadow-card: 0 14px 32px rgba(37, 99, 235, 0.08);
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -128,6 +130,7 @@
       z-index: 999;
       transition: top 0.2s;
     }
+
     .skip-link:focus {
       top: 12px;
     }
@@ -143,7 +146,10 @@
       color: inherit;
     }
 
-    button, input, select, textarea {
+    button,
+    input,
+    select,
+    textarea {
       font-family: inherit;
       border: none;
     }
@@ -174,7 +180,8 @@
       gap: 10px;
     }
 
-    .top-bar-left, .top-bar-right {
+    .top-bar-left,
+    .top-bar-right {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -311,7 +318,8 @@
       position: relative;
     }
 
-    .nav-link:hover, .nav-link.active-page {
+    .nav-link:hover,
+    .nav-link.active-page {
       color: var(--cblue-700);
     }
 
@@ -634,7 +642,8 @@
       margin-bottom: 18px;
     }
 
-    .mobile-drawer-links a, .mobile-drawer-links button {
+    .mobile-drawer-links a,
+    .mobile-drawer-links button {
       font-weight: 700;
       padding: 10px 14px;
       border-radius: var(--radius-md);
@@ -648,7 +657,8 @@
       cursor: pointer;
     }
 
-    .mobile-drawer-links a:hover, .mobile-drawer-links button:hover {
+    .mobile-drawer-links a:hover,
+    .mobile-drawer-links button:hover {
       background: var(--cblue-50);
       color: var(--cblue-800);
     }
@@ -1047,7 +1057,8 @@
     }
 
     /* GRIDS */
-    .chacara-grid, .three-col-grid {
+    .chacara-grid,
+    .three-col-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 22px;
@@ -1105,10 +1116,21 @@
       margin-bottom: 16px;
     }
 
-    .bg-green-box { background: var(--cgreen-100); }
-    .bg-orange-box { background: var(--corange-100); }
-    .bg-blue-box { background: var(--cblue-100); }
-    .bg-yellow-box { background: #fef08a; }
+    .bg-green-box {
+      background: var(--cgreen-100);
+    }
+
+    .bg-orange-box {
+      background: var(--corange-100);
+    }
+
+    .bg-blue-box {
+      background: var(--cblue-100);
+    }
+
+    .bg-yellow-box {
+      background: #fef08a;
+    }
 
     .chacara-card h3 {
       font-family: var(--font-title);
@@ -1479,9 +1501,20 @@
       margin-bottom: 6px;
     }
 
-    .role-blue { background: var(--cblue-100); color: var(--cblue-800); }
-    .role-orange { background: var(--corange-100); color: var(--corange-800); }
-    .role-green { background: var(--cgreen-100); color: var(--cgreen-800); }
+    .role-blue {
+      background: var(--cblue-100);
+      color: var(--cblue-800);
+    }
+
+    .role-orange {
+      background: var(--corange-100);
+      color: var(--corange-800);
+    }
+
+    .role-green {
+      background: var(--cgreen-100);
+      color: var(--cgreen-800);
+    }
 
     .team-card-name {
       font-family: var(--font-title);
@@ -1704,8 +1737,13 @@
       border-color: var(--cblue-300);
     }
 
-    .depoimento-card.orange { border-color: var(--corange-100); }
-    .depoimento-card.green { border-color: var(--cgreen-100); }
+    .depoimento-card.orange {
+      border-color: var(--corange-100);
+    }
+
+    .depoimento-card.green {
+      border-color: var(--cgreen-100);
+    }
 
     .stars-row {
       display: flex;
@@ -1824,8 +1862,13 @@
       flex-shrink: 0;
     }
 
-    .contact-item-icon.yellow { color: #fde047; }
-    .contact-item-icon.orange { color: #fed7aa; }
+    .contact-item-icon.yellow {
+      color: #fde047;
+    }
+
+    .contact-item-icon.orange {
+      color: #fed7aa;
+    }
 
     .visita-footer-note {
       font-size: 0.78rem;
@@ -1869,7 +1912,9 @@
       margin-bottom: 6px;
     }
 
-    .form-group input, .form-group select, .form-group textarea {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
       width: 100%;
       padding: 12px 16px;
       border-radius: var(--radius-md);
@@ -1879,7 +1924,9 @@
       font-size: 0.88rem;
     }
 
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
       border-color: var(--corange-500);
       background: rgba(15, 23, 42, 0.95);
       outline: none;
@@ -2099,8 +2146,15 @@
     }
 
     @keyframes modalPop {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+      from {
+        transform: scale(0.95);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .modal-paper-top {
@@ -2330,35 +2384,104 @@
 
     /* MEDIA QUERIES */
     @media (min-width: 640px) {
-      .hero-buttons { flex-direction: row; }
-      .form-row, .chacara-grid, .three-col-grid, .depoimentos-grid, .cycle-tags-grid, .doc-grid {
+      .hero-buttons {
+        flex-direction: row;
+      }
+
+      .form-row,
+      .chacara-grid,
+      .three-col-grid,
+      .depoimentos-grid,
+      .cycle-tags-grid,
+      .doc-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .trust-metrics-bar { grid-template-columns: repeat(2, 1fr); }
-      .float-sticker { display: flex; }
-      .footer-bottom-bar { flex-direction: row; justify-content: space-between; text-align: left; }
+
+      .trust-metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .float-sticker {
+        display: flex;
+      }
+
+      .footer-bottom-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
     }
 
     @media (min-width: 992px) {
-      .desktop-nav, .header-actions { display: flex; }
-      .mobile-menu-toggle { display: none; }
-      .hero-grid { grid-template-columns: 1.2fr 0.9fr; gap: 50px; }
-      .hero-content { text-align: left; }
-      .hero-description { margin-left: 0; }
-      .hero-pills, .hero-buttons, .hero-coffee-note { justify-content: flex-start; }
+
+      .desktop-nav,
+      .header-actions {
+        display: flex;
+      }
+
+      .mobile-menu-toggle {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.9fr;
+        gap: 50px;
+      }
+
+      .hero-content {
+        text-align: left;
+      }
+
+      .hero-description {
+        margin-left: 0;
+      }
+
+      .hero-pills,
+      .hero-buttons,
+      .hero-coffee-note {
+        justify-content: flex-start;
+      }
+
       .trust-metrics-bar {
         grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
         align-items: center;
         text-align: left;
       }
-      .metric-divider { display: block; height: 44px; }
-      .chacara-grid { grid-template-columns: repeat(4, 1fr); }
-      .three-col-grid, .depoimentos-grid, .doc-grid { grid-template-columns: repeat(3, 1fr); }
-      .cycle-panel.active { grid-template-columns: 1.15fr 0.85fr; }
-      .cycle-img-box { height: 380px; }
-      .comunicacao-grid { grid-template-columns: 1.25fr 0.95fr; }
-      .visita-banner { grid-template-columns: 0.9fr 1.3fr; }
-      .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1.2fr; }
+
+      .metric-divider {
+        display: block;
+        height: 44px;
+      }
+
+      .chacara-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .three-col-grid,
+      .depoimentos-grid,
+      .doc-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cycle-panel.active {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+
+      .cycle-img-box {
+        height: 380px;
+      }
+
+      .comunicacao-grid {
+        grid-template-columns: 1.25fr 0.95fr;
+      }
+
+      .visita-banner {
+        grid-template-columns: 0.9fr 1.3fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+      }
     }
   </style>
 </head>
@@ -2475,7 +2598,8 @@
                     <span>Diretrizes e avaliação formativa</span>
                   </div>
                 </a>
-                <button onclick="openFamilyDrawer('materiais')" class="mega-menu-item" style="text-align: left; background: none; border: none; width: 100%; cursor: pointer;">
+                <button onclick="openFamilyDrawer('materiais')" class="mega-menu-item"
+                  style="text-align: left; background: none; border: none; width: 100%; cursor: pointer;">
                   <div class="mega-item-icon bg-yellow-box">🗓️</div>
                   <div>
                     <strong>Regimento, Manuais & Materiais</strong>
@@ -2512,7 +2636,8 @@
           Jornal & Notícias
         </a>
 
-        <button onclick="openFamilyDrawer('materiais')" class="nav-family-btn" title="Lista de Materiais, Uniforme e Manual">
+        <button onclick="openFamilyDrawer('materiais')" class="nav-family-btn"
+          title="Lista de Materiais, Uniforme e Manual">
           <i data-lucide="book-open" style="width: 15px; height: 15px; color: var(--cblue-700);"></i>
           Área da Família
         </button>
@@ -2542,7 +2667,8 @@
     <!-- Gaveta Mobile -->
     <div class="mobile-drawer" id="mobile-drawer">
       <div class="mobile-drawer-links">
-        <button onclick="openFamilyDrawer('materiais'); toggleMobileMenu(true);" style="background: var(--corange-50); color: var(--corange-800); border: 1px solid var(--corange-200); font-weight: 800;">
+        <button onclick="openFamilyDrawer('materiais'); toggleMobileMenu(true);"
+          style="background: var(--corange-50); color: var(--corange-800); border: 1px solid var(--corange-200); font-weight: 800;">
           <span>🎒 Área da Família (Materiais, Uniforme, Manual)</span>
           <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
         </button>
@@ -2552,12 +2678,14 @@
         <a href="#cooperativa" class="mobile-link">A Cooperativa de Famílias</a>
         <a href="#equipe" class="mobile-link">Equipe & Educadores</a>
         <a href="#documentos" class="mobile-link">Documentos & PPP</a>
-        <a href="#comunicacao-section" class="mobile-link" style="background: var(--corange-50); color: var(--corange-700);">
+        <a href="#comunicacao-section" class="mobile-link"
+          style="background: var(--corange-50); color: var(--corange-700);">
           <span>📰 Jornal & Notícias</span>
         </a>
       </div>
       <a href="#visita" class="btn-primary mobile-link"
-        style="display: flex; justify-content: center; width: 100%; margin-bottom: 10px;" onclick="toggleMobileMenu(true)">
+        style="display: flex; justify-content: center; width: 100%; margin-bottom: 10px;"
+        onclick="toggleMobileMenu(true)">
         Agendar Visita com a Família
       </a>
       <a href="https://wa.me/551934243730" target="_blank" rel="noopener noreferrer" class="btn-secondary"
@@ -2590,7 +2718,8 @@
           <p class="hero-description">
             Aqui seu filho não é apenas um número de matrícula. Em uma acolhedora
             <strong style="color: var(--slate-900);">chácara de 6.000 m²</strong>, criamos um espaço seguro onde as
-            crianças sobem em árvores, investigam a terra, desenvolvem pensamento crítico e crescem felizes e seguras de si.
+            crianças sobem em árvores, investigam a terra, desenvolvem pensamento crítico e crescem felizes e seguras de
+            si.
           </p>
 
           <div class="hero-pills">
@@ -2773,9 +2902,12 @@
         </div>
 
         <div class="cycles-tabs-nav" role="tablist" aria-label="Ciclos de Ensino">
-          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="tab-infantil">🐣 Educação Infantil (2 a 5 anos)</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-fundamental">📚 Ensino Fundamental (1º ao 9º ano)</button>
-          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-integral">☀️ Período Integral Sem Estresse</button>
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="tab-infantil">🐣 Educação Infantil (2
+            a 5 anos)</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-fundamental">📚 Ensino Fundamental (1º
+            ao 9º ano)</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab-integral">☀️ Período Integral Sem
+            Estresse</button>
         </div>
 
         <!-- Painel Infantil -->
@@ -2784,8 +2916,10 @@
             <span class="section-badge badge-orange">🐥 Primeiras Grandes Descobertas</span>
             <h3>Brincar livre, afeto na acolhida e os primeiros laços sociais</h3>
             <p>
-              Na Educação Infantil da Coopep, respeitamos o tempo da infância. Sem excesso de telas ou cobrança mecânica.
-              Aqui as crianças descobrem o mundo brincando com água, folhas, sementes e rodas de história, aprendendo a conviver com empatia e carinho.
+              Na Educação Infantil da Coopep, respeitamos o tempo da infância. Sem excesso de telas ou cobrança
+              mecânica.
+              Aqui as crianças descobrem o mundo brincando com água, folhas, sementes e rodas de história, aprendendo a
+              conviver com empatia e carinho.
             </p>
             <div class="cycle-tags-grid">
               <div class="cycle-tag-item"><span>🌿</span> Contato diário com a terra e horta</div>
@@ -2811,7 +2945,8 @@
             <span class="section-badge badge-blue">📖 1º ao 9º ano</span>
             <h3>Pesquisa que faz sentido, diálogo aberto e senso crítico</h3>
             <p>
-              No Ensino Fundamental, o sociointeracionismo ganha vigor. Os conteúdos curriculares são explorados através de projetos reais,
+              No Ensino Fundamental, o sociointeracionismo ganha vigor. Os conteúdos curriculares são explorados através
+              de projetos reais,
               debates, investigações na chácara e livros didáticos renomados (Moderna Buriti e Araribá Plus).
             </p>
             <div class="cycle-tags-grid">
@@ -2838,7 +2973,8 @@
             <span class="section-badge badge-green">☀️ Turno Estendido Sem Estresse</span>
             <h3>Um segundo lar com afeto, apoio pedagógico e oficinas</h3>
             <p>
-              Para as famílias que precisam de período integral, planejamos uma extensão equilibrada com almoço balanceado,
+              Para as famílias que precisam de período integral, planejamos uma extensão equilibrada com almoço
+              balanceado,
               apoio nas lições de casa, oficinas de música, teatro, culinária infantil e muito tempo livre no bosque.
             </p>
             <div class="cycle-tags-grid">
@@ -2874,7 +3010,8 @@
           </span>
           <h2 class="section-title">Por que uma escola gerida por pais faz toda a diferença?</h2>
           <p class="section-subtitle">
-            Aqui não existe um proprietário ou grupo empresarial visando lucro. A Coopep é uma cooperativa fundada por famílias piracicabanas,
+            Aqui não existe um proprietário ou grupo empresarial visando lucro. A Coopep é uma cooperativa fundada por
+            famílias piracicabanas,
             onde toda a receita é reinvestida no conforto dos nossos filhos e na valorização dos educadores.
           </p>
         </div>
@@ -2884,7 +3021,8 @@
             <div>
               <div class="card-icon-box bg-blue-box" style="font-size: 1.6rem;">❤️</div>
               <h3>100% Reinvestido</h3>
-              <p>Cada mensalidade é direcionada para melhorias nos espaços da chácara, novos livros, alimentação de qualidade e formação contínua para nossos professores.</p>
+              <p>Cada mensalidade é direcionada para melhorias nos espaços da chácara, novos livros, alimentação de
+                qualidade e formação contínua para nossos professores.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--cblue-800);">Transparência total e conselho fiscal</div>
           </article>
@@ -2893,7 +3031,8 @@
             <div>
               <div class="card-icon-box bg-orange-box" style="font-size: 1.6rem;">👨‍👩‍👧‍👦</div>
               <h3>Famílias Presentes</h3>
-              <p>Os pais têm voz ativa nas assembleias, participam de comissões de melhorias e celebram juntos nas festas comunitárias tradicionais da escola.</p>
+              <p>Os pais têm voz ativa nas assembleias, participam de comissões de melhorias e celebram juntos nas
+                festas comunitárias tradicionais da escola.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--corange-800);">Comunidade que educa unida</div>
           </article>
@@ -2902,7 +3041,8 @@
             <div>
               <div class="card-icon-box bg-green-box" style="font-size: 1.6rem;">🌱</div>
               <h3>Turminhas Reduzidas</h3>
-              <p>Salas com número controlado de estudantes para que o educador conheça a fundo o ritmo, as afinidades e as necessidades individuais de cada criança.</p>
+              <p>Salas com número controlado de estudantes para que o educador conheça a fundo o ritmo, as afinidades e
+                as necessidades individuais de cada criança.</p>
             </div>
             <div class="card-footer-pill" style="color: var(--cgreen-800);">Atenção individualizada de verdade</div>
           </article>
@@ -2939,18 +3079,21 @@
                 <i data-lucide="bell" style="width: 20px; height: 20px; color: var(--corange-600);"></i>
                 Últimos Avisos & Festas
               </h3>
-              <span style="font-size: 0.75rem; color: var(--slate-500); font-weight: 700;">Atualizado recentemente</span>
+              <span style="font-size: 0.75rem; color: var(--slate-500); font-weight: 700;">Atualizado
+                recentemente</span>
             </div>
 
             <article class="news-card" tabindex="0" role="button"
               onclick="openNewsModal('Festa da Primavera na Chácara: Música, Ciranda e Piquenique', 'Convidamos todas as famílias para celebrar a estação das flores debaixo de nossas mangueiras! Teremos apresentações musicais dos alunos, oficinas de barro e partilha comunitária de lanches saudáveis no sábado.')">
               <div class="news-meta">
-                <span class="meta-tag" style="background: var(--cgreen-100); color: var(--cgreen-800);">Vida Escolar</span>
+                <span class="meta-tag" style="background: var(--cgreen-100); color: var(--cgreen-800);">Vida
+                  Escolar</span>
                 <span>•</span>
                 <span>Setembro, 2026</span>
               </div>
               <h4>Festa da Primavera na Chácara: Música, Ciranda e Piquenique</h4>
-              <p>Um sábado especial para reunir avós, pais e crianças para festejar os ciclos da natureza em Piracicaba.</p>
+              <p>Um sábado especial para reunir avós, pais e crianças para festejar os ciclos da natureza em Piracicaba.
+              </p>
               <div class="news-card-link">
                 Ler comunicado completo
                 <i data-lucide="chevron-right" style="width: 14px; height: 14px;"></i>
@@ -2960,7 +3103,8 @@
             <article class="news-card" tabindex="0" role="button"
               onclick="openNewsModal('Oficina de Culinária com Frutas Colhidas do Pomar', 'As turmas da Educação Infantil e dos primeiros anos colheram amoras e mangas e participaram de uma aula divertida de geleias caseiras naturais com a equipe de nutrição escolar.')">
               <div class="news-meta">
-                <span class="meta-tag" style="background: var(--corange-100); color: var(--corange-800);">Pedagógico</span>
+                <span class="meta-tag"
+                  style="background: var(--corange-100); color: var(--corange-800);">Pedagógico</span>
                 <span>•</span>
                 <span>Setembro, 2026</span>
               </div>
@@ -2998,7 +3142,8 @@
                   <span>Escrito e ilustrado pelos alunos</span>
                 </div>
               </div>
-              <span class="meta-tag" style="background: var(--corange-100); color: var(--corange-800); font-size: 0.75rem;">
+              <span class="meta-tag"
+                style="background: var(--corange-100); color: var(--corange-800); font-size: 0.75rem;">
                 Edição nº 42
               </span>
             </div>
@@ -3023,7 +3168,8 @@
               <i data-lucide="book-open" style="width: 18px; height: 18px;"></i>
               Abrir e Folhear o Jornal dos Alunos
             </button>
-            <button class="btn-secondary" style="width: 100%; justify-content: center;" onclick="mockDownloadPdf('Jornal-Vozes-da-Chacara-Ed42.pdf')">
+            <button class="btn-secondary" style="width: 100%; justify-content: center;"
+              onclick="mockDownloadPdf('Jornal-Vozes-da-Chacara-Ed42.pdf')">
               <i data-lucide="download" style="width: 16px; height: 16px; color: var(--cblue-800);"></i>
               Baixar Edição Ilustrada em PDF
             </button>
@@ -3048,7 +3194,8 @@
             Quem acolhe, escuta e caminha junto com seu filho
           </h2>
           <p class="section-subtitle">
-            A Escola Coopep investe continuamente na formação do seu corpo docente. Conheça as lideranças da nossa gestão pedagógica.
+            A Escola Coopep investe continuamente na formação do seu corpo docente. Conheça as lideranças da nossa
+            gestão pedagógica.
           </p>
         </div>
 
@@ -3112,11 +3259,13 @@
             <span class="section-badge badge-orange" style="margin-bottom: 8px;">
               <span>✨</span> Corpo Docente e Apoio Completo
             </span>
-            <h3 style="font-family: var(--font-title); font-size: 1.45rem; color: var(--cblue-950); margin-bottom: 8px;">
+            <h3
+              style="font-family: var(--font-title); font-size: 1.45rem; color: var(--cblue-950); margin-bottom: 8px;">
               Conheça todos os nossos professores polivalentes, especialistas e equipe de apoio
             </h3>
             <p style="font-size: 0.9rem; color: var(--slate-600); margin: 0;">
-              Equipe multidisciplinar em Arte, Música, Inglês, Ciências, História, Geografia, Filosofia e secretaria escolar.
+              Equipe multidisciplinar em Arte, Música, Inglês, Ciências, História, Geografia, Filosofia e secretaria
+              escolar.
             </p>
           </div>
           <button onclick="openFamilyDrawer('manual')" class="btn-primary btn-lg">
@@ -3160,7 +3309,8 @@
                 </div>
               </div>
               <p class="doc-card-desc">
-                Fundamentação teórica construtivista (Piaget e Vygotsky), princípios de convivência e objetivos formativos da Educação Infantil e Fundamental.
+                Fundamentação teórica construtivista (Piaget e Vygotsky), princípios de convivência e objetivos
+                formativos da Educação Infantil e Fundamental.
               </p>
               <div class="doc-meta-tags">
                 <span class="doc-meta-pill">📅 Vigência 2023/2024</span>
@@ -3185,7 +3335,8 @@
                 </div>
               </div>
               <p class="doc-card-desc">
-                Organização escolar, direitos e deveres dos alunos, critérios de avaliação formativa e normas institucionais registradas.
+                Organização escolar, direitos e deveres dos alunos, critérios de avaliação formativa e normas
+                institucionais registradas.
               </p>
               <div class="doc-meta-tags">
                 <span class="doc-meta-pill">📅 Vigência Vigente</span>
@@ -3193,7 +3344,8 @@
               </div>
             </div>
             <div class="doc-card-actions">
-              <button onclick="mockDownloadPdf('Regimento-Escolar-Coopep.pdf')" class="doc-download-btn" style="background: var(--corange-600);">
+              <button onclick="mockDownloadPdf('Regimento-Escolar-Coopep.pdf')" class="doc-download-btn"
+                style="background: var(--corange-600);">
                 <i data-lucide="download" style="width: 15px; height: 15px;"></i>
                 Baixar Regimento
               </button>
@@ -3210,7 +3362,8 @@
                 </div>
               </div>
               <p class="doc-card-desc">
-                A base societária e jurídica da cooperativa mantenedora sem fins lucrativos: direitos de voto das famílias e governança compartilhada.
+                A base societária e jurídica da cooperativa mantenedora sem fins lucrativos: direitos de voto das
+                famílias e governança compartilhada.
               </p>
               <div class="doc-meta-tags">
                 <span class="doc-meta-pill">📅 Registrado JUCESP</span>
@@ -3218,7 +3371,8 @@
               </div>
             </div>
             <div class="doc-card-actions">
-              <button onclick="mockDownloadPdf('Estatuto-Social-JUCESP-Coopep.pdf')" class="doc-download-btn" style="background: var(--cgreen-700);">
+              <button onclick="mockDownloadPdf('Estatuto-Social-JUCESP-Coopep.pdf')" class="doc-download-btn"
+                style="background: var(--cgreen-700);">
                 <i data-lucide="download" style="width: 15px; height: 15px;"></i>
                 Baixar Estatuto
               </button>
@@ -3232,8 +3386,10 @@
             <span>✨</span> Central Completa de Transparência
           </div>
           <h3>Acesse a lista de materiais 2026, guias de uniformes e o manual</h3>
-          <p>Tudo o que pais, mães e cooperados precisam para o dia a dia está disponível na nossa gaveta lateral de documentos.</p>
-          <button onclick="openFamilyDrawer('materiais')" class="btn-primary btn-lg" style="background: var(--corange-500);">
+          <p>Tudo o que pais, mães e cooperados precisam para o dia a dia está disponível na nossa gaveta lateral de
+            documentos.</p>
+          <button onclick="openFamilyDrawer('materiais')" class="btn-primary btn-lg"
+            style="background: var(--corange-500);">
             <i data-lucide="folder-open" style="width: 18px; height: 18px;"></i>
             Abrir Central da Família & Documentos
             <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
@@ -3255,7 +3411,8 @@
           </span>
           <h2 class="section-title">Com a palavra, as famílias que caminham conosco</h2>
           <p class="section-subtitle">
-            Relatos verdadeiros de quem encontrou na Coopep o acolhimento, a infância livre e a parceria que sempre desejou.
+            Relatos verdadeiros de quem encontrou na Coopep o acolhimento, a infância livre e a parceria que sempre
+            desejou.
           </p>
         </div>
 
@@ -3271,7 +3428,8 @@
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
               </div>
               <p class="depoimento-text">
-                "Minha filha chega em casa contando sobre as minhocas da composteira e as brincadeiras sob a sombra das árvores. Aqui a infância é valorizada com verdade."
+                "Minha filha chega em casa contando sobre as minhocas da composteira e as brincadeiras sob a sombra das
+                árvores. Aqui a infância é valorizada com verdade."
               </p>
             </div>
             <footer class="depoimento-author">
@@ -3293,7 +3451,8 @@
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
               </div>
               <p class="depoimento-text">
-                "O modelo de cooperativa nos aproxima da escola. Sabemos para onde vai cada investimento e participamos ativamente das conversas pedagógicas."
+                "O modelo de cooperativa nos aproxima da escola. Sabemos para onde vai cada investimento e participamos
+                ativamente das conversas pedagógicas."
               </p>
             </div>
             <footer class="depoimento-author">
@@ -3315,7 +3474,8 @@
                 <i data-lucide="star" style="width: 16px; height: 16px; fill: currentColor;"></i>
               </div>
               <p class="depoimento-text">
-                "As turmas pequenas permitem aos professores enxergar cada criança por inteiro. Meu filho se sente seguro para se expressar e fazer perguntas."
+                "As turmas pequenas permitem aos professores enxergar cada criança por inteiro. Meu filho se sente
+                seguro para se expressar e fazer perguntas."
               </p>
             </div>
             <footer class="depoimento-author">
@@ -3472,7 +3632,8 @@
           </p>
           <div class="footer-social-icons">
             <a href="https://wa.me/551934243730" target="_blank" rel="noopener noreferrer" class="footer-icon-btn"
-              title="WhatsApp" aria-label="WhatsApp"><i data-lucide="message-circle" style="width: 16px; height: 16px;"></i></a>
+              title="WhatsApp" aria-label="WhatsApp"><i data-lucide="message-circle"
+                style="width: 16px; height: 16px;"></i></a>
             <a href="mailto:secretaria@escolacoopep.com.br" class="footer-icon-btn" title="E-mail"
               aria-label="E-mail"><i data-lucide="mail" style="width: 16px; height: 16px;"></i></a>
             <a href="https://maps.google.com/?q=Av.+Dois+Córregos,+3526+-+Piracicaba" target="_blank"
@@ -3560,17 +3721,22 @@
 
       <!-- Conteúdo das Abas -->
       <div class="drawer-body">
-        
+
         <!-- PANE: MATERIAIS -->
         <div class="drawer-pane active" id="dpane-materiais">
           <div class="drawer-card" style="border-left: 4px solid var(--corange-500);">
-            <h4><i data-lucide="bell" style="width: 16px; height: 16px; color: var(--corange-600);"></i> Entrega de Materiais 2026</h4>
-            <p>Os itens coletivos e cadernos devem ser entregues devidamente etiquetados com o <strong>nome completo do aluno e ano escolar</strong> no primeiro dia letivo.</p>
+            <h4><i data-lucide="bell" style="width: 16px; height: 16px; color: var(--corange-600);"></i> Entrega de
+              Materiais 2026</h4>
+            <p>Os itens coletivos e cadernos devem ser entregues devidamente etiquetados com o <strong>nome completo do
+                aluno e ano escolar</strong> no primeiro dia letivo.</p>
           </div>
 
           <div class="drawer-card">
-            <h4><i data-lucide="shopping-bag" style="width: 16px; height: 16px; color: var(--cblue-700);"></i> Desconto nos Livros da Editora Moderna</h4>
-            <p>As famílias associadas possuem desconto especial pelo convênio SomosCoop. Para adquirir, acesse <strong>modernacompartilha.com.br</strong>, selecione <em>Piracicaba > Escola Coopep</em> e insira o CPF do responsável financeiro cooperado.</p>
+            <h4><i data-lucide="shopping-bag" style="width: 16px; height: 16px; color: var(--cblue-700);"></i> Desconto
+              nos Livros da Editora Moderna</h4>
+            <p>As famílias associadas possuem desconto especial pelo convênio SomosCoop. Para adquirir, acesse
+              <strong>modernacompartilha.com.br</strong>, selecione <em>Piracicaba > Escola Coopep</em> e insira o CPF
+              do responsável financeiro cooperado.</p>
           </div>
 
           <div class="drawer-card">
@@ -3578,19 +3744,23 @@
             <div class="drawer-sublist">
               <div class="drawer-subitem">
                 <span>Grupo 2 (G2) • 2 anos</span>
-                <button onclick="mockDownloadPdf('Materiais-2026-G2.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+                <button onclick="mockDownloadPdf('Materiais-2026-G2.pdf')"><i data-lucide="download"
+                    style="width: 12px; height: 12px;"></i> Baixar PDF</button>
               </div>
               <div class="drawer-subitem">
                 <span>Grupo 3 (G3) • 3 anos</span>
-                <button onclick="mockDownloadPdf('Materiais-2026-G3.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+                <button onclick="mockDownloadPdf('Materiais-2026-G3.pdf')"><i data-lucide="download"
+                    style="width: 12px; height: 12px;"></i> Baixar PDF</button>
               </div>
               <div class="drawer-subitem">
                 <span>Grupo 4 (G4) • 4 anos</span>
-                <button onclick="mockDownloadPdf('Materiais-2026-G4.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+                <button onclick="mockDownloadPdf('Materiais-2026-G4.pdf')"><i data-lucide="download"
+                    style="width: 12px; height: 12px;"></i> Baixar PDF</button>
               </div>
               <div class="drawer-subitem">
                 <span>Grupo 5 (G5) • 5 anos</span>
-                <button onclick="mockDownloadPdf('Materiais-2026-G5.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+                <button onclick="mockDownloadPdf('Materiais-2026-G5.pdf')"><i data-lucide="download"
+                    style="width: 12px; height: 12px;"></i> Baixar PDF</button>
               </div>
             </div>
           </div>
@@ -3600,15 +3770,18 @@
             <div class="drawer-sublist">
               <div class="drawer-subitem">
                 <span>1º ao 3º Ano EF I (Coleção Buriti Plus)</span>
-                <button onclick="mockDownloadPdf('Materiais-2026-1ao3ano.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+                <button onclick="mockDownloadPdf('Materiais-2026-1ao3ano.pdf')"><i data-lucide="download"
+                    style="width: 12px; height: 12px;"></i> Baixar PDF</button>
               </div>
               <div class="drawer-subitem">
                 <span>4º e 5º Anos EF I (Coleção Buriti Plus)</span>
-                <button onclick="mockDownloadPdf('Materiais-2026-4e5ano.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+                <button onclick="mockDownloadPdf('Materiais-2026-4e5ano.pdf')"><i data-lucide="download"
+                    style="width: 12px; height: 12px;"></i> Baixar PDF</button>
               </div>
               <div class="drawer-subitem">
                 <span>6º ao 9º Ano EF II (Coleção Araribá Plus)</span>
-                <button onclick="mockDownloadPdf('Materiais-2026-Fund2.pdf')"><i data-lucide="download" style="width: 12px; height: 12px;"></i> Baixar PDF</button>
+                <button onclick="mockDownloadPdf('Materiais-2026-Fund2.pdf')"><i data-lucide="download"
+                    style="width: 12px; height: 12px;"></i> Baixar PDF</button>
               </div>
             </div>
           </div>
@@ -3617,16 +3790,20 @@
         <!-- PANE: UNIFORME -->
         <div class="drawer-pane" id="dpane-uniforme">
           <div class="drawer-card">
-            <h4><i data-lucide="info" style="width: 16px; height: 16px; color: var(--cblue-700);"></i> Diretrizes de Uso</h4>
-            <p><strong>Dia a dia:</strong> Camiseta oficial da escola, bermuda/calça e tênis confortável para as brincadeiras na terra.<br><br>
-            <strong>Saídas de Estudo do Meio:</strong> Obrigatório o uso da <em>camiseta branca oficial com o logotipo da Coopep</em> para fácil identificação e segurança coletiva.<br><br>
-            <strong>Educação Física:</strong> Calçado esportivo com meia e camiseta oficial.</p>
+            <h4><i data-lucide="info" style="width: 16px; height: 16px; color: var(--cblue-700);"></i> Diretrizes de Uso
+            </h4>
+            <p><strong>Dia a dia:</strong> Camiseta oficial da escola, bermuda/calça e tênis confortável para as
+              brincadeiras na terra.<br><br>
+              <strong>Saídas de Estudo do Meio:</strong> Obrigatório o uso da <em>camiseta branca oficial com o logotipo
+                da Coopep</em> para fácil identificação e segurança coletiva.<br><br>
+              <strong>Educação Física:</strong> Calçado esportivo com meia e camiseta oficial.
+            </p>
           </div>
 
           <div class="drawer-card">
             <h4>Confecções Borges (Fornecedora Oficial)</h4>
             <p>Av. Manoel Conceição, 907 - Vila Rezende, Piracicaba<br>
-            Telefone: (19) 3371-7099</p>
+              Telefone: (19) 3371-7099</p>
             <div style="margin-top: 10px;">
               <a href="tel:1933717099" class="btn-secondary" style="font-size: 0.8rem; padding: 6px 14px;">
                 <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Ligar para a Loja
@@ -3637,9 +3814,11 @@
           <div class="drawer-card">
             <h4>Unisport Piracicaba (Fornecedora Oficial)</h4>
             <p>Rua Boa Morte, 1236 - Centro, Piracicaba<br>
-            Telefone: (19) 3301-1777 • WhatsApp: (19) 9840-8914</p>
+              Telefone: (19) 3301-1777 • WhatsApp: (19) 9840-8914</p>
             <div style="margin-top: 10px;">
-              <a href="https://wa.me/5519998408914?text=Olá!%20Gostaria%20de%20consultar%20valores%20do%20uniforme%20da%20Escola%20Coopep." target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.8rem; padding: 6px 14px; background: #25d366;">
+              <a href="https://wa.me/5519998408914?text=Olá!%20Gostaria%20de%20consultar%20valores%20do%20uniforme%20da%20Escola%20Coopep."
+                target="_blank" rel="noopener noreferrer" class="btn-primary"
+                style="font-size: 0.8rem; padding: 6px 14px; background: #25d366;">
                 <i data-lucide="message-circle" style="width: 14px; height: 14px;"></i> Falar no WhatsApp
               </a>
             </div>
@@ -3649,14 +3828,20 @@
         <!-- PANE: MANUAL DO ALUNO -->
         <div class="drawer-pane" id="dpane-manual">
           <div class="drawer-card" style="border-left: 4px solid var(--cgreen-600);">
-            <h4><i data-lucide="check-circle" style="width: 16px; height: 16px; color: var(--cgreen-600);"></i> Resumo de Normas e Rotinas</h4>
-            <p><strong>Pontualidade:</strong> Tolerância de 10 minutos após o início das aulas. O limite legal de faltas para promoção no ano letivo é de no máximo 25% dos dias previstos.<br><br>
-            <strong>Almoço no Período Integral:</strong> Dividido em dois grupos (Grupo 1 às 11h e Grupo 2 às 11h30). Cada criança deve trazer toalha de banho e higiene identificadas.<br><br>
-            <strong>Aparelhos Celulares:</strong> É proibido o uso de celulares e jogos eletrônicos durante as aulas e intervalos, preservando o convívio saudável sob o bosque.<br><br>
-            <strong>Biblioteca:</strong> Empréstimo de até 2 livros simultâneos por aluno com prazo de 7 dias úteis.</p>
+            <h4><i data-lucide="check-circle" style="width: 16px; height: 16px; color: var(--cgreen-600);"></i> Resumo
+              de Normas e Rotinas</h4>
+            <p><strong>Pontualidade:</strong> Tolerância de 10 minutos após o início das aulas. O limite legal de faltas
+              para promoção no ano letivo é de no máximo 25% dos dias previstos.<br><br>
+              <strong>Almoço no Período Integral:</strong> Dividido em dois grupos (Grupo 1 às 11h e Grupo 2 às 11h30).
+              Cada criança deve trazer toalha de banho e higiene identificadas.<br><br>
+              <strong>Aparelhos Celulares:</strong> É proibido o uso de celulares e jogos eletrônicos durante as aulas e
+              intervalos, preservando o convívio saudável sob o bosque.<br><br>
+              <strong>Biblioteca:</strong> Empréstimo de até 2 livros simultâneos por aluno com prazo de 7 dias úteis.
+            </p>
           </div>
 
-          <button onclick="mockDownloadPdf('Manual-do-Estudante-Escola-Coopep.pdf')" class="btn-primary" style="width: 100%; justify-content: center;">
+          <button onclick="mockDownloadPdf('Manual-do-Estudante-Escola-Coopep.pdf')" class="btn-primary"
+            style="width: 100%; justify-content: center;">
             <i data-lucide="download" style="width: 16px; height: 16px;"></i>
             Baixar Manual do Estudante Completo (PDF)
           </button>
@@ -3669,7 +3854,7 @@
   <!-- ======================================================== -->
   <!-- 14. MODAIS INTERATIVOS & WHATSAPP FLUTUANTE              -->
   <!-- ======================================================== -->
-  
+
   <!-- MODAL: LEITOR DO JORNAL DOS ALUNOS -->
   <div class="coopep-modal" id="modal-newspaper" role="dialog" aria-modal="true"
     aria-labelledby="newspaper-modal-title">
@@ -3679,7 +3864,8 @@
           <span style="font-size: 1.4rem;">📰</span>
           <div>
             <h4 id="newspaper-modal-title">Vozes da Chácara — Edição nº 42</h4>
-            <span style="font-size: 0.72rem; color: var(--slate-600);">Produzido pelas crianças e educadores da Coopep</span>
+            <span style="font-size: 0.72rem; color: var(--slate-600);">Produzido pelas crianças e educadores da
+              Coopep</span>
           </div>
         </div>
         <button onclick="closeNewspaperModal()" aria-label="Fechar leitor do jornal"
@@ -3690,14 +3876,16 @@
 
       <div class="modal-body-scroll">
         <div class="mock-newspaper-page">
-          <div style="border-bottom: 2px solid var(--cblue-100); padding-bottom: 12px; margin-bottom: 16px; text-align: center;">
+          <div
+            style="border-bottom: 2px solid var(--cblue-100); padding-bottom: 12px; margin-bottom: 16px; text-align: center;">
             <span style="font-size: 0.72rem; font-weight: 800; color: var(--corange-600); text-transform: uppercase;">
               Caderno de Ciências Naturais & Vivências da Chácara
             </span>
             <h3 style="font-family: var(--font-title); font-size: 1.6rem; color: var(--cblue-950); margin-top: 4px;">
               "A terra não é só o chão que a gente pisa: é uma casa cheia de vida!"
             </h3>
-            <p style="font-size: 0.75rem; color: var(--slate-500);">Reportagem dos alunos do 4º e 5º ano • Orientação: Professoras Polivalentes</p>
+            <p style="font-size: 0.75rem; color: var(--slate-500);">Reportagem dos alunos do 4º e 5º ano • Orientação:
+              Professoras Polivalentes</p>
           </div>
 
           <div style="font-size: 0.88rem; color: var(--slate-700); line-height: 1.65;">
@@ -3706,8 +3894,10 @@
               Nesta semana, fomos até a composteira para ver como as cascas de maçã e folhas secas viram adubo fofinho
               para os pezinhos de alface e tomate.
             </p>
-            <div style="background: var(--corange-50); border: 1.5px solid var(--corange-200); border-radius: var(--radius-md); padding: 12px; margin-bottom: 14px;">
-              <strong style="font-family: var(--font-title); color: var(--corange-700); display: block; font-size: 0.85rem; margin-bottom: 4px;">
+            <div
+              style="background: var(--corange-50); border: 1.5px solid var(--corange-200); border-radius: var(--radius-md); padding: 12px; margin-bottom: 14px;">
+              <strong
+                style="font-family: var(--font-title); color: var(--corange-700); display: block; font-size: 0.85rem; margin-bottom: 4px;">
                 Poesia Coletiva dos Alunos:
               </strong>
               <p style="font-style: italic; font-size: 0.8rem; color: var(--slate-600);">
@@ -3716,14 +3906,16 @@
               </p>
             </div>
             <p>
-              As fotografias desta edição foram tiradas pelos próprios estudantes do Fundamental II com as câmeras digitais da oficina de comunicação.
+              As fotografias desta edição foram tiradas pelos próprios estudantes do Fundamental II com as câmeras
+              digitais da oficina de comunicação.
             </p>
           </div>
         </div>
       </div>
 
       <div class="modal-footer">
-        <button class="btn-secondary" onclick="mockDownloadPdf('Jornal-Vozes-da-Chacara-Ed42.pdf')" style="font-size: 0.82rem;">
+        <button class="btn-secondary" onclick="mockDownloadPdf('Jornal-Vozes-da-Chacara-Ed42.pdf')"
+          style="font-size: 0.82rem;">
           <i data-lucide="download" style="width: 14px; height: 14px;"></i> Baixar PDF
         </button>
         <button class="btn-primary" onclick="closeNewspaperModal()" style="font-size: 0.82rem;">
@@ -3759,7 +3951,8 @@
   </div>
 
   <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/551934243730?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20Escola%20Coopep." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn"
+  <a href="https://wa.me/551934243730?text=Olá!%20Gostaria%20de%20informações%20sobre%20a%20Escola%20Coopep."
+    target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn"
     aria-label="Conversar com a secretaria pelo WhatsApp">
     <i data-lucide="message-circle" style="width: 26px; height: 26px;"></i>
     <span class="whatsapp-tooltip">Fale com a Secretaria</span>
@@ -3955,6 +4148,21 @@
         document.getElementById('visita-form').reset();
       }, 500);
     }
+
+    // Carregamento dinâmico de notícias e jornal do CMS
+    async function loadCMSContent() {
+      try {
+        // 1. Carrega notícias cadastradas
+        const response = await fetch('/content/noticias/index.json').catch(() => null);
+        // Se você estiver usando gerador estático ou API do GitHub, os itens são mapeados aqui:
+        // Exemplo de preenchimento automático:
+        // renderNewsCard(item);
+      } catch (error) {
+        console.log('Utilizando conteúdo padrão da Coopep pré-renderizado.');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCMSContent);
   </script>
 </body>
 
